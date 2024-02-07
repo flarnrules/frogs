@@ -1,12 +1,12 @@
 {
     "perch": {
         "lilypad.png": 10,
-        "belly.png": 1,
-        "rock.png": 5
+        "belly.png": 0.5,
+        "rock.png": 2
     },
     "eyes": {
         "down right.png": 16.67,
-        "red.png": 16.67,
+        "red.png": 5,
         "sly.png": 16.67,
         "down left.png": 16.67,
         "up left.png": 16.67,
@@ -24,34 +24,30 @@
         "cute brunette.png": 5.0,
         "frog.png": 5.0,
         "cute red head.png": 5.0,
-        "fly thought.png": 5.0,
         "red hat.png": 5.0,
         "beanie.png": 5.0,
         "unicorn horn.png": 5.0,
-        "halo.png": 5.0,
+        "halo.png": 2,
         "cute blonde.png": 5.0,
-        "heron.png": 5.0,
-        "none.png": 5.0,
+        "none.png": 15,
         "helicopter hat.png": 5.0,
         "cowboy hat.png": 5.0,
         "poo.png": 5.0,
-        "ladyfrog thought.png": 5.0,
-        "heart thought.png": 5.0,
         "bob marley hat.png": 5.0,
-        "crown.png": 5.0
+        "crown.png": 1
     },
     "frog": {
-        "starry night toad.png": 9.09,
-        "ghost.png": 9.09,
-        "red.png": 9.09,
-        "radioactive.png": 9.09,
-        "orange.png": 9.09,
-        "stone.png": 9.09,
-        "green.png": 9.09,
-        "invisible.png": 9.09,
-        "poison dart frog.png": 9.09,
-        "blue.png": 9.09,
-        "gold.png": 9.09
+        "starry night toad.png": 1,
+        "ghost.png": 1,
+        "red.png": 5,
+        "radioactive.png": 1,
+        "orange.png": 5,
+        "stone.png": 5,
+        "green.png": 10,
+        "invisible.png": 1,
+        "poison dart frog.png": 1,
+        "blue.png": 5,
+        "gold.png": 0.5
     },
     "background": {
         "office park.png": 11.11,
@@ -61,7 +57,7 @@
         "clouds.png": 11.11,
         "night sky.png": 11.11,
         "green field.png": 11.11,
-        "desolate.png": 11.11,
+        "desolate.png": 2,
         "network.png": 1
     },
     "mouth": {
@@ -86,7 +82,11 @@
         "silly tongue.png": 1,
         "toothy.png": 1,
         "plain.png": 15,
-        "network.png": 1
+        "network.png": 1,
+        "fly thought.png": 1,
+        "ladyfrog thought.png": 1,
+        "heart thought.png": 1,
+        "heron.png": 1
     },
     "water": {
         "detailed.png": 25.0,
