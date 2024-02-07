@@ -1,0 +1,10 @@
+flies - 7
+accessory - 4
+headgear - 17
+eyes - 6
+mouth - 17
+frog - 11
+lilypad - 2
+wildlife - 2
+water - 4
+background - 9

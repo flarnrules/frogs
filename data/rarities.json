@@ -1,0 +1,115 @@
+{
+    "perch": {
+        "lilypad.png": 10,
+        "belly.png": 1,
+        "rock.png": 5
+    },
+    "eyes": {
+        "down right.png": 16.67,
+        "red.png": 16.67,
+        "sly.png": 16.67,
+        "down left.png": 16.67,
+        "up left.png": 16.67,
+        "up right.png": 16.67
+    },
+    "features": {
+        "rocks.png": 25.0,
+        "none.png": 25.0,
+        "flowers.png": 25.0,
+        "rocks and flowers.png": 25.0
+    },
+    "headgear": {
+        "horns.png": 5.0,
+        "cool hair.png": 5.0,
+        "cute brunette.png": 5.0,
+        "frog.png": 5.0,
+        "cute red head.png": 5.0,
+        "fly thought.png": 5.0,
+        "red hat.png": 5.0,
+        "beanie.png": 5.0,
+        "unicorn horn.png": 5.0,
+        "halo.png": 5.0,
+        "cute blonde.png": 5.0,
+        "heron.png": 5.0,
+        "none.png": 5.0,
+        "helicopter hat.png": 5.0,
+        "cowboy hat.png": 5.0,
+        "poo.png": 5.0,
+        "ladyfrog thought.png": 5.0,
+        "heart thought.png": 5.0,
+        "bob marley hat.png": 5.0,
+        "crown.png": 5.0
+    },
+    "frog": {
+        "starry night toad.png": 9.09,
+        "ghost.png": 9.09,
+        "red.png": 9.09,
+        "radioactive.png": 9.09,
+        "orange.png": 9.09,
+        "stone.png": 9.09,
+        "green.png": 9.09,
+        "invisible.png": 9.09,
+        "poison dart frog.png": 9.09,
+        "blue.png": 9.09,
+        "gold.png": 9.09
+    },
+    "background": {
+        "office park.png": 11.11,
+        "forest.png": 11.11,
+        "pines.png": 11.11,
+        "sunny day.png": 11.11,
+        "clouds.png": 11.11,
+        "night sky.png": 11.11,
+        "green field.png": 11.11,
+        "desolate.png": 11.11,
+        "network.png": 1
+    },
+    "mouth": {
+        "long tongue.png": 1,
+        "open.png": 5,
+        "incredibly long tongue.png": 1,
+        "longest frog tongue in an nft.png": 1,
+        "medium tongue.png": 1,
+        "pink tongue.png": 1,
+        "fangs.png": 1,
+        "blue tongue.png": 1,
+        "guiness book of world records - longest frog tongue in an nft.png": 1,
+        "snaggletooth.png": 5,
+        "very long tongue.png": 1,
+        "absurdly long tongue.png": 1,
+        "small tongue.png": 5,
+        "dang that's a long tongue.png": 1,
+        "smirk.png": 10,
+        "i wonder if this tongue is setting a record....png": 1,
+        "tongue that is completely insanely long.png": 1,
+        "okay this tongue is getting ridiculous.png": 1,
+        "silly tongue.png": 1,
+        "toothy.png": 1,
+        "plain.png": 15,
+        "network.png": 1
+    },
+    "water": {
+        "detailed.png": 25.0,
+        "lava.png": 25.0,
+        "none.png": 25.0,
+        "blue.png": 25.0
+    },
+    "flies": {
+        "4.png": 1,
+        "7.png": 1,
+        "2.png": 2,
+        "3.png": 3,
+        "1.png": 4,
+        "5.png": 1,
+        "6.png": 1,
+        "none.png": 15,
+        "8.png": 1
+    },
+    "accessory": {
+        "trident.png": 3,
+        "cloak.png": 2,
+        "none.png": 10,
+        "snake.png": 1,
+        "chain.png": 4
+    }
+}
