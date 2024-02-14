@@ -58,9 +58,8 @@ def generate_image_and_metadata(image_number):
     
     # Generate and save metadata
     metadata = {
-        "name": f"Unique Frog NFT #{image_number}",
-        "description": "A unique Frog NFT with various traits.",
-        "image": f"images/{image_number}.png",  # Adjust if necessary
+        "name": f"Frog {image_number}",
+        "description": "Frogs inspired by the infamous Frogstar from the Smoker's Club.",
         "attributes": [{ "trait_type": key, "value": value.split('.')[0] } for key, value in selected_traits.items()]
     }
     with open(os.path.join(path_to_nfts_metadata, f"{image_number}.json"), 'w') as metafile:
