@@ -1,0 +1,54 @@
+{
+    "name": "Network Frog 4",
+    "description": "🛰️ The Network is an NFT community that is for members only. You need to hold an nft with a 'network' trait in order to be considered. They add new nfts over time, based on community vote. Network traits typically display a color scheme of blue, green, yellow, red and pink in them, and often have some sort of satellite or other transmission imagery. Perhaps one day these network trait frogs will be considered access to this exclusive club 🛰️",
+    "attributes": [
+        {
+            "trait_type": "type",
+            "value": "network"
+        },
+        {
+            "trait_type": "frames",
+            "value": 14
+        },
+        {
+            "trait_type": "background",
+            "value": "satellite"
+        },
+        {
+            "trait_type": "water",
+            "value": "none"
+        },
+        {
+            "trait_type": "perch",
+            "value": "lilypad"
+        },
+        {
+            "trait_type": "features",
+            "value": "none"
+        },
+        {
+            "trait_type": "frog",
+            "value": "network green"
+        },
+        {
+            "trait_type": "headgear",
+            "value": "none"
+        },
+        {
+            "trait_type": "eyes",
+            "value": "tracking"
+        },
+        {
+            "trait_type": "mouth",
+            "value": "plain"
+        },
+        {
+            "trait_type": "accessory",
+            "value": "none"
+        },
+        {
+            "trait_type": "flies",
+            "value": "none"
+        }
+    ]
+}

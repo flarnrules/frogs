@@ -1,0 +1,54 @@
+{
+    "name": "Friar",
+    "description": "🍷 Encounter the Keeper of the Casks! 🐸\n\nBeneath the tavern's bustle, this vigilant frog guards the golden brews. His stoic gaze sweeps the shadowy rows, ensuring every barrel's seal remains unbroken. A silent sentinel in the cool cellar, he takes pride in the precious nectar of hops and grains. Here lies the heart of the tavern's cheer, fiercely protected by the Keeper's unwavering watch. 🍻🍷",
+    "attributes": [
+        {
+            "trait_type": "type",
+            "value": "frogdom"
+        },
+        {
+            "trait_type": "frames",
+            "value": 1
+        },
+        {
+            "trait_type": "background",
+            "value": "cellar"
+        },
+        {
+            "trait_type": "water",
+            "value": "none"
+        },
+        {
+            "trait_type": "perch",
+            "value": "barrel"
+        },
+        {
+            "trait_type": "features",
+            "value": "none"
+        },
+        {
+            "trait_type": "frog",
+            "value": "green"
+        },
+        {
+            "trait_type": "headgear",
+            "value": "friar"
+        },
+        {
+            "trait_type": "eyes",
+            "value": "dots"
+        },
+        {
+            "trait_type": "mouth",
+            "value": "smirk"
+        },
+        {
+            "trait_type": "accessory",
+            "value": "wine"
+        },
+        {
+            "trait_type": "flies",
+            "value": ""
+        }
+    ]
+}

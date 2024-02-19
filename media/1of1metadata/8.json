@@ -1,0 +1,54 @@
+{
+    "name": "Rogue",
+    "description": "🍺 Meet the Sly Ale-Sipper of the Swampy Tavern! 🐸\n\nHidden in the shadows with a frothy brew, this cunning rogue's eyes twinkle with mischief. He hatches his next heist between sips, blending with the boisterous crowd. Master of stealth and guile, he's the whisper in the dark, the unexpected ally, the thief with a heart of gold. 🌙✨",
+    "attributes": [
+        {
+            "trait_type": "type",
+            "value": "frogdom"
+        },
+        {
+            "trait_type": "frames",
+            "value": 1
+        },
+        {
+            "trait_type": "background",
+            "value": "pub"
+        },
+        {
+            "trait_type": "water",
+            "value": "none"
+        },
+        {
+            "trait_type": "perch",
+            "value": "stool"
+        },
+        {
+            "trait_type": "features",
+            "value": "none"
+        },
+        {
+            "trait_type": "frog",
+            "value": "green"
+        },
+        {
+            "trait_type": "headgear",
+            "value": "rogue"
+        },
+        {
+            "trait_type": "eyes",
+            "value": "up left"
+        },
+        {
+            "trait_type": "mouth",
+            "value": "plain"
+        },
+        {
+            "trait_type": "accessory",
+            "value": "frothy brew"
+        },
+        {
+            "trait_type": "flies",
+            "value": ""
+        }
+    ]
+}

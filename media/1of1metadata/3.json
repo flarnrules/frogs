@@ -1,0 +1,54 @@
+{
+    "name": "Wizard",
+    "description": "🧙‍♂️ Introducing the Mystic Frog of the Murky Woods! 🐸\n\nCloaked in the wisdom of the forest, this sage amphibian wields the wand of wonder, casting spells of growth and renewal. With a wise crackle and a kind eye, he enchants the woodland creatures and flora with his ancient chants. A wizard not by chance, but by choice, the keeper of the marshland's magic and mystery. 🍄✨",
+    "attributes": [
+        {
+            "trait_type": "type",
+            "value": "frogdom"
+        },
+        {
+            "trait_type": "frames",
+            "value": 1
+        },
+        {
+            "trait_type": "background",
+            "value": "wizard tower"
+        },
+        {
+            "trait_type": "water",
+            "value": "none"
+        },
+        {
+            "trait_type": "perch",
+            "value": "lilypad"
+        },
+        {
+            "trait_type": "features",
+            "value": "flowers"
+        },
+        {
+            "trait_type": "frog",
+            "value": "green"
+        },
+        {
+            "trait_type": "headgear",
+            "value": "wizard hat"
+        },
+        {
+            "trait_type": "eyes",
+            "value": "brown"
+        },
+        {
+            "trait_type": "mouth",
+            "value": "smirk"
+        },
+        {
+            "trait_type": "accessory",
+            "value": "wizard staff"
+        },
+        {
+            "trait_type": "flies",
+            "value": ""
+        }
+    ]
+}

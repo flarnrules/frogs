@@ -1,0 +1,54 @@
+{
+    "name": "Turtle",
+    "description": "🚫🐸These are not frogs. But they typically live where frogs live. 🐸🚫",
+    "attributes": [
+        {
+            "trait_type": "type",
+            "value": "not a frog"
+        },
+        {
+            "trait_type": "frames",
+            "value": 1
+        },
+        {
+            "trait_type": "background",
+            "value": "forest"
+        },
+        {
+            "trait_type": "water",
+            "value": "detailed"
+        },
+        {
+            "trait_type": "perch",
+            "value": "lilypad"
+        },
+        {
+            "trait_type": "features",
+            "value": "flowers"
+        },
+        {
+            "trait_type": "frog",
+            "value": "turtle"
+        },
+        {
+            "trait_type": "headgear",
+            "value": "horns"
+        },
+        {
+            "trait_type": "eyes",
+            "value": "angry"
+        },
+        {
+            "trait_type": "mouth",
+            "value": "fangs"
+        },
+        {
+            "trait_type": "accessory",
+            "value": "spiked shell"
+        },
+        {
+            "trait_type": "flies",
+            "value": ""
+        }
+    ]
+}

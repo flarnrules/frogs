@@ -1,0 +1,54 @@
+{
+    "name": "Jester",
+    "description": "🎭 Presenting the Jovial Pond Jester! 🐸\n\nDecked in a colorful collar of water blossoms and a cap of glistening dew beads, this spirited frog spreads laughter across the pond. With a twinkle in his eye and a trick up his sleeve, he turns every lily pad into a stage for his merry antics. The jester not just of jests but joy, the merry-maker of the marsh. 🎉💧",
+    "attributes": [
+        {
+            "trait_type": "type",
+            "value": "frogdom"
+        },
+        {
+            "trait_type": "frames",
+            "value": 1
+        },
+        {
+            "trait_type": "background",
+            "value": "inside castle"
+        },
+        {
+            "trait_type": "water",
+            "value": "none"
+        },
+        {
+            "trait_type": "perch",
+            "value": "lilypad"
+        },
+        {
+            "trait_type": "features",
+            "value": "flowers"
+        },
+        {
+            "trait_type": "frog",
+            "value": "green"
+        },
+        {
+            "trait_type": "headgear",
+            "value": "jester"
+        },
+        {
+            "trait_type": "eyes",
+            "value": "dots"
+        },
+        {
+            "trait_type": "mouth",
+            "value": "silly"
+        },
+        {
+            "trait_type": "accessory",
+            "value": "none"
+        },
+        {
+            "trait_type": "flies",
+            "value": ""
+        }
+    ]
+}

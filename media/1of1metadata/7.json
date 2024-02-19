@@ -1,0 +1,54 @@
+{
+    "name": "Ranger",
+    "description": "🏹 Meet the Ranger of the Lily Pads! 🐸\n\nCamouflaged in the greenery, this vigilant guardian of the pond stands poised with bow in hand. As the sun sets, his arrow whispers through the air, striking true. Defender of the downtrodden and protector of the peaceful, he's not just a warrior, but a hero of the reeds. 🌾🎯",
+    "attributes": [
+        {
+            "trait_type": "type",
+            "value": "frogdom"
+        },
+        {
+            "trait_type": "frames",
+            "value": 1
+        },
+        {
+            "trait_type": "background",
+            "value": "archery"
+        },
+        {
+            "trait_type": "water",
+            "value": "none"
+        },
+        {
+            "trait_type": "perch",
+            "value": "lilypad"
+        },
+        {
+            "trait_type": "features",
+            "value": "flowers"
+        },
+        {
+            "trait_type": "frog",
+            "value": "green"
+        },
+        {
+            "trait_type": "headgear",
+            "value": "ranger"
+        },
+        {
+            "trait_type": "eyes",
+            "value": "sly"
+        },
+        {
+            "trait_type": "mouth",
+            "value": "plain"
+        },
+        {
+            "trait_type": "accessory",
+            "value": "bow and quiver"
+        },
+        {
+            "trait_type": "flies",
+            "value": ""
+        }
+    ]
+}

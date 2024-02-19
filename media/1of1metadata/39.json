@@ -1,0 +1,54 @@
+{
+    "name": "Trashcan",
+    "description": "🚫🐸These are not frogs. But they typically live where frogs live. 🐸🚫",
+    "attributes": [
+        {
+            "trait_type": "type",
+            "value": "not a frog"
+        },
+        {
+            "trait_type": "frames",
+            "value": 1
+        },
+        {
+            "trait_type": "background",
+            "value": "forest"
+        },
+        {
+            "trait_type": "water",
+            "value": "none"
+        },
+        {
+            "trait_type": "perch",
+            "value": "none"
+        },
+        {
+            "trait_type": "features",
+            "value": "none"
+        },
+        {
+            "trait_type": "frog",
+            "value": "trashcan"
+        },
+        {
+            "trait_type": "headgear",
+            "value": "none"
+        },
+        {
+            "trait_type": "eyes",
+            "value": "none"
+        },
+        {
+            "trait_type": "mouth",
+            "value": "none"
+        },
+        {
+            "trait_type": "accessory",
+            "value": "none"
+        },
+        {
+            "trait_type": "flies",
+            "value": "🪰🪰🪰🪰🪰🪰🪰🪰🪰🪰🪰🪰🪰🪰🪰"
+        }
+    ]
+}

@@ -1,0 +1,54 @@
+{
+    "name": "Squire",
+    "description": "🛡️ Behold the Squire of the Swamplands! 🐸\n\nEager and earnest, this young amphibian apprentice upholds the traditions of the pond's noble knights. In training to earn his spurs, he polishes armor and sharpens swords, his eyes alight with dreams of chivalry. With every task, he grows closer to knighthood, his resolve as sturdy as the cobblestone walls that shelter him. 🌟🗡️",
+    "attributes": [
+        {
+            "trait_type": "type",
+            "value": "frogdom"
+        },
+        {
+            "trait_type": "frames",
+            "value": 1
+        },
+        {
+            "trait_type": "background",
+            "value": "castle"
+        },
+        {
+            "trait_type": "water",
+            "value": "none"
+        },
+        {
+            "trait_type": "perch",
+            "value": "lilypad"
+        },
+        {
+            "trait_type": "features",
+            "value": "none"
+        },
+        {
+            "trait_type": "frog",
+            "value": "green"
+        },
+        {
+            "trait_type": "headgear",
+            "value": "squire"
+        },
+        {
+            "trait_type": "eyes",
+            "value": "up right"
+        },
+        {
+            "trait_type": "mouth",
+            "value": "smirk"
+        },
+        {
+            "trait_type": "accessory",
+            "value": "none"
+        },
+        {
+            "trait_type": "flies",
+            "value": ""
+        }
+    ]
+}

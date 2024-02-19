@@ -1,0 +1,54 @@
+{
+    "name": "King",
+    "description": "👑 Meet the Sovereign Hopper! 🐸\n\nCrowned with elegance, this regal amphibian reigns over the Lily Pad Kingdom with wisdom and grace. Adorned in a red cape and a majestic crown, and carrying the ruby sceptre, each leap echoes the legacy of frog kings past. A true monarch of the marshlands, embodying nobility and splendor. 🏰✨",
+    "attributes": [
+        {
+            "trait_type": "type",
+            "value": "frogdom"
+        },
+        {
+            "trait_type": "frames",
+            "value": 1
+        },
+        {
+            "trait_type": "background",
+            "value": "frog kingdom"
+        },
+        {
+            "trait_type": "water",
+            "value": "none"
+        },
+        {
+            "trait_type": "perch",
+            "value": "lilypad"
+        },
+        {
+            "trait_type": "features",
+            "value": "flowers"
+        },
+        {
+            "trait_type": "frog",
+            "value": "green"
+        },
+        {
+            "trait_type": "headgear",
+            "value": "crown"
+        },
+        {
+            "trait_type": "eyes",
+            "value": "blue"
+        },
+        {
+            "trait_type": "mouth",
+            "value": "smirk"
+        },
+        {
+            "trait_type": "accessory",
+            "value": "sceptre"
+        },
+        {
+            "trait_type": "flies",
+            "value": ""
+        }
+    ]
+}

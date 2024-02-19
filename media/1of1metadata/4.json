@@ -1,0 +1,54 @@
+{
+    "name": "Knight",
+    "description": "🛡️ Salute the Gallant Frog Knight! 🐸\n\nArmor-clad and sword at the ready, this chivalrous frog defends the pond with honor and valor. Behind his helmet's visor lies the gaze of courage, unwavering in the face of danger. With banners flying high, he stands as the protector of the weak, the champion of the lilies, and the hero of the reeds. For glory, for the leap, for the kingdom! 🏰⚔️",
+    "attributes": [
+        {
+            "trait_type": "type",
+            "value": "frogdom"
+        },
+        {
+            "trait_type": "frames",
+            "value": 1
+        },
+        {
+            "trait_type": "background",
+            "value": "castle"
+        },
+        {
+            "trait_type": "water",
+            "value": "none"
+        },
+        {
+            "trait_type": "perch",
+            "value": "lilypad"
+        },
+        {
+            "trait_type": "features",
+            "value": "flowers"
+        },
+        {
+            "trait_type": "frog",
+            "value": "green"
+        },
+        {
+            "trait_type": "headgear",
+            "value": "helmet"
+        },
+        {
+            "trait_type": "eyes",
+            "value": "serious"
+        },
+        {
+            "trait_type": "mouth",
+            "value": "smirk"
+        },
+        {
+            "trait_type": "accessory",
+            "value": "sword and shield"
+        },
+        {
+            "trait_type": "flies",
+            "value": ""
+        }
+    ]
+}

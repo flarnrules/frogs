@@ -1,0 +1,54 @@
+{
+    "name": "Excalibog",
+    "description": "🗡️ 'Excalibog' awaits its hero! 🐸\n\nIn a twist of fate, the legendary blade chose not a king, but a pond as its throne. Frogs leap past, casting curious glances at the shimmering sword, whispering, 'Is it for real?' The trees rustle with rumors, and the stones stand in silent awe. Who will pull the sword from the stone? Perhaps it's awaiting a true frog knight... or maybe it's just enjoying a good soak. 🌳💦",
+    "attributes": [
+        {
+            "trait_type": "type",
+            "value": "frogdom"
+        },
+        {
+            "trait_type": "frames",
+            "value": 1
+        },
+        {
+            "trait_type": "background",
+            "value": "forest"
+        },
+        {
+            "trait_type": "water",
+            "value": "none"
+        },
+        {
+            "trait_type": "perch",
+            "value": "stone"
+        },
+        {
+            "trait_type": "features",
+            "value": "none"
+        },
+        {
+            "trait_type": "frog",
+            "value": "sword"
+        },
+        {
+            "trait_type": "headgear",
+            "value": "none"
+        },
+        {
+            "trait_type": "eyes",
+            "value": "none"
+        },
+        {
+            "trait_type": "mouth",
+            "value": "none"
+        },
+        {
+            "trait_type": "accessory",
+            "value": "none"
+        },
+        {
+            "trait_type": "flies",
+            "value": ""
+        }
+    ]
+}

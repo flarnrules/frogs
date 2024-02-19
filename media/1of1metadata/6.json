@@ -1,0 +1,54 @@
+{
+    "name": "Mystic",
+    "description": "🔮 Gaze into the soul of the Enlightened Amphibian! 🐸✨\n\nSeated in the realm of transcendent lily pads, this sage harbors the wisdom of the waters. With his third eye opened to the unseen currents of the universe, he channels the ancient secrets of the frogs before him. An oracle of the pond, his presence is a bridge between the material and the mystical. 🌟👁️",
+    "attributes": [
+        {
+            "trait_type": "type",
+            "value": "frogdom"
+        },
+        {
+            "trait_type": "frames",
+            "value": 1
+        },
+        {
+            "trait_type": "background",
+            "value": "sanctuary"
+        },
+        {
+            "trait_type": "water",
+            "value": "none"
+        },
+        {
+            "trait_type": "perch",
+            "value": "lilypad"
+        },
+        {
+            "trait_type": "features",
+            "value": "flowers"
+        },
+        {
+            "trait_type": "frog",
+            "value": "green"
+        },
+        {
+            "trait_type": "headgear",
+            "value": "none"
+        },
+        {
+            "trait_type": "eyes",
+            "value": "third eye"
+        },
+        {
+            "trait_type": "mouth",
+            "value": "smirk"
+        },
+        {
+            "trait_type": "accessory",
+            "value": "none"
+        },
+        {
+            "trait_type": "flies",
+            "value": ""
+        }
+    ]
+}

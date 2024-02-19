@@ -7,7 +7,7 @@ from PIL import Image
 path_to_layers = '../layers/'
 path_to_nfts_images = '../nfts/images/'
 path_to_nfts_metadata = '../nfts/metadata/'
-number_of_images = 378
+number_of_images = 300
 
 # Ensure output directories exist
 os.makedirs(path_to_nfts_images, exist_ok=True)

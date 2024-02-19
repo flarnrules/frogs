@@ -1,0 +1,54 @@
+{
+    "name": "Queen",
+    "description": "👑 Behold Her Royal Highness, the Queen of Croaks! 🐸\n\nCarrying her emerald orb and crowned with a diadem that outshines the morning dew, she presides over the aquatic kingdom. Her gentle gaze commands reverence, her elegance unmatched. This sovereign of the water lilies wields her power with a delicate touch, ensuring harmony and prosperity ripple across her realm. 🌸🌿",
+    "attributes": [
+        {
+            "trait_type": "type",
+            "value": "frogdom"
+        },
+        {
+            "trait_type": "frames",
+            "value": 1
+        },        
+        {
+            "trait_type": "background",
+            "value": "frog queendom"
+        },
+        {
+            "trait_type": "water",
+            "value": "none"
+        },
+        {
+            "trait_type": "perch",
+            "value": "lilypad"
+        },
+        {
+            "trait_type": "features",
+            "value": "flowers"
+        },
+        {
+            "trait_type": "frog",
+            "value": "green"
+        },
+        {
+            "trait_type": "headgear",
+            "value": "queen"
+        },
+        {
+            "trait_type": "eyes",
+            "value": "green"
+        },
+        {
+            "trait_type": "mouth",
+            "value": "smirk"
+        },
+        {
+            "trait_type": "accessory",
+            "value": "orb"
+        },
+        {
+            "trait_type": "flies",
+            "value": ""
+        }
+    ]
+}

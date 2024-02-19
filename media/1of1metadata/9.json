@@ -1,0 +1,54 @@
+{
+    "name": "Scholar",
+    "description": "📚 Introducing the Scholar of Secrets! 🐸\n\nAmidst ancient tomes and mystical scrolls, this erudite amphibian delves into forbidden knowledge. With a golden key that unlocks the lost lore of bygone bogs, he conjures spells from words whispered only in hushed ribbits. A sage in the sanctuary of stories, his wisdom is as deep as the marshes he calls home. 🔑✨",
+    "attributes": [
+        {
+            "trait_type": "type",
+            "value": "frogdom"
+        },
+        {
+            "trait_type": "frames",
+            "value": 1
+        },
+        {
+            "trait_type": "background",
+            "value": "study"
+        },
+        {
+            "trait_type": "water",
+            "value": "none"
+        },
+        {
+            "trait_type": "perch",
+            "value": "stool"
+        },
+        {
+            "trait_type": "features",
+            "value": "none"
+        },
+        {
+            "trait_type": "frog",
+            "value": "green"
+        },
+        {
+            "trait_type": "headgear",
+            "value": "scholar"
+        },
+        {
+            "trait_type": "eyes",
+            "value": "spectacles"
+        },
+        {
+            "trait_type": "mouth",
+            "value": "plain"
+        },
+        {
+            "trait_type": "accessory",
+            "value": "instruments"
+        },
+        {
+            "trait_type": "flies",
+            "value": ""
+        }
+    ]
+}
