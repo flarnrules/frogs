@@ -7,7 +7,7 @@ from PIL import Image
 path_to_layers = '../layers/'
 path_to_nfts_images = '../nfts/images/'
 path_to_nfts_metadata = '../nfts/metadata/'
-number_of_images = 300
+number_of_images = 320
 
 # Ensure output directories exist
 os.makedirs(path_to_nfts_images, exist_ok=True)
@@ -59,7 +59,7 @@ def generate_image_and_metadata(image_number):
     # Generate and save metadata
     metadata = {
         "name": f"Frog {image_number}",
-        "description": "Frogs inspired by the infamous Frogstar from the Smoker's Club.",
+        "description": "Eclectic frogs inspired by the infamous Frogstar from the Smoker's Club.",
         "attributes": [{ "trait_type": key, "value": value.split('.')[0] } for key, value in selected_traits.items()]
     }
     with open(os.path.join(path_to_nfts_metadata, f"{image_number}.json"), 'w') as metafile:

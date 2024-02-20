@@ -1,0 +1,54 @@
+{
+    "name": "Hungry Frog 14",
+    "description": "🐸These frogs have an insatiable hunger, only fulfilled by an infinite number of repeating meals until the end of time (or at least until the end of the stargaze blockchain and/or the end of the interplanetary filesystem). There must be an infinite supply of digital flies for all of this to work.♾️",
+    "attributes": [
+        {
+            "trait_type": "type",
+            "value": "hungry frog"
+        },
+        {
+            "trait_type": "frames",
+            "value": 26
+        },
+        {
+            "trait_type": "background",
+            "value": "glitch stars"
+        },
+        {
+            "trait_type": "water",
+            "value": "none"
+        },
+        {
+            "trait_type": "perch",
+            "value": "lilypad"
+        },
+        {
+            "trait_type": "features",
+            "value": "none"
+        },
+        {
+            "trait_type": "frog",
+            "value": "stone"
+        },
+        {
+            "trait_type": "headgear",
+            "value": "frog"
+        },
+        {
+            "trait_type": "eyes",
+            "value": "watching 3"
+        },
+        {
+            "trait_type": "mouth",
+            "value": "eating 3"
+        },
+        {
+            "trait_type": "accessory",
+            "value": "none"
+        },
+        {
+            "trait_type": "flies",
+            "value": "🪰 x ♾️"
+        }
+    ]
+}

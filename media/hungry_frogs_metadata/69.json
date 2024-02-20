@@ -1,0 +1,54 @@
+{
+    "name": "Hungry Frog 29",
+    "description": "🐸These poor hungry frogs are overwhelmed by the sheer quantity and splendor of the procession of an infinite number of rainbow colored flies, that they aren't able to focus long enough to get a tasty snack. ♾️🌈🪰",
+    "attributes": [
+        {
+            "trait_type": "type",
+            "value": "hungry frog"
+        },
+        {
+            "trait_type": "frames",
+            "value": 35
+        },
+        {
+            "trait_type": "background",
+            "value": "night sky"
+        },
+        {
+            "trait_type": "water",
+            "value": "none"
+        },
+        {
+            "trait_type": "perch",
+            "value": "lilypad"
+        },
+        {
+            "trait_type": "features",
+            "value": "flowers"
+        },
+        {
+            "trait_type": "frog",
+            "value": "starry night toad"
+        },
+        {
+            "trait_type": "headgear",
+            "value": "none"
+        },
+        {
+            "trait_type": "eyes",
+            "value": "watching 4"
+        },
+        {
+            "trait_type": "mouth",
+            "value": "not eating"
+        },
+        {
+            "trait_type": "accessory",
+            "value": "none"
+        },
+        {
+            "trait_type": "flies",
+            "value": "🌈🪰 x ♾️"
+        }
+    ]
+}

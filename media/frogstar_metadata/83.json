@@ -1,0 +1,54 @@
+{
+    "name": "🔥FIREFROG🔥",
+    "description": "This frog doesn't even come from a pond. It comes from someplace... much different.🔥",
+    "attributes": [
+        {
+            "trait_type": "type",
+            "value": "frogstar collab"
+        },
+        {
+            "trait_type": "frames",
+            "value": 15
+        },
+        {
+            "trait_type": "background",
+            "value": "yellow circles"
+        },
+        {
+            "trait_type": "water",
+            "value": "none"
+        },
+        {
+            "trait_type": "perch",
+            "value": "none"
+        },
+        {
+            "trait_type": "features",
+            "value": "none"
+        },
+        {
+            "trait_type": "frog",
+            "value": "red"
+        },
+        {
+            "trait_type": "headgear",
+            "value": "none"
+        },
+        {
+            "trait_type": "eyes",
+            "value": "anatomically correct"
+        },
+        {
+            "trait_type": "mouth",
+            "value": "closed"
+        },
+        {
+            "trait_type": "accessory",
+            "value": "none"
+        },
+        {
+            "trait_type": "flies",
+            "value": "🪰 x ♾️"
+        }
+    ]
+}

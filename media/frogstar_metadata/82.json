@@ -1,0 +1,54 @@
+{
+    "name": "FROGGY 2",
+    "description": "This frog is from a different pond.",
+    "attributes": [
+        {
+            "trait_type": "type",
+            "value": "frogstar collab"
+        },
+        {
+            "trait_type": "frames",
+            "value": 15
+        },
+        {
+            "trait_type": "background",
+            "value": "clouds"
+        },
+        {
+            "trait_type": "water",
+            "value": "none"
+        },
+        {
+            "trait_type": "perch",
+            "value": "lilypad"
+        },
+        {
+            "trait_type": "features",
+            "value": "cannibis leaf"
+        },
+        {
+            "trait_type": "frog",
+            "value": "green"
+        },
+        {
+            "trait_type": "headgear",
+            "value": "none"
+        },
+        {
+            "trait_type": "eyes",
+            "value": "anatomically correct"
+        },
+        {
+            "trait_type": "mouth",
+            "value": "closed"
+        },
+        {
+            "trait_type": "accessory",
+            "value": "none"
+        },
+        {
+            "trait_type": "flies",
+            "value": "🪰 x ♾️"
+        }
+    ]
+}
