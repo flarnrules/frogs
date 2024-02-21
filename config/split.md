@@ -1,0 +1,25 @@
+# mainnet version
+## wallets
+stars1wtcp7m7589vdmsse30rsrlt357dwy0qygc79uf - me
+stars1hyhmssn4j6fxlvq58ctlpxwg5az7shg7zc77rp - proto towers royalties
+stars12jrc38pc09frc4v7fqdsrmwp6rlfmxxaswnqpsf24m6p7q3u6n6qua5yju - pt dao
+stars1mlxynkqd9js8tkdnkk0e27lgz7x9lt866n5r44 - smokers
+stars1c7l3lvqp53fdg4ux8yvemsf540s044ne29gwk4 - frogstar
+
+## contract address
+stars10t5xw60sh8vt65qz7j5935y6q6v08ppr0uadltgwsar52y34jvfsrxsde5
+
+
+# testnet version
+## wallets
+stars1wtcp7m7589vdmsse30rsrlt357dwy0qygc79uf - me
+stars1hyhmssn4j6fxlvq58ctlpxwg5az7shg7zc77rp - proto towers royalties
+stars12jrc38pc09frc4v7fqdsrmwp6rlfmxxaswnqpsf24m6p7q3u6n6qua5yju - pt dao
+stars1mlxynkqd9js8tkdnkk0e27lgz7x9lt866n5r44 - smokers
+stars1c7l3lvqp53fdg4ux8yvemsf540s044ne29gwk4 - frogstar
+
+## contract address
+stars1832s4hutpxeqtn9lf6l6fr0fpjhtkalrdk5g78u44cxgcla3zyqqlcujjw
+
+
+
