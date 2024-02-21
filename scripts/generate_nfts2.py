@@ -7,7 +7,7 @@ from PIL import Image
 path_to_layers = '../layers/'
 path_to_nfts_images = '../nfts/images/'
 path_to_nfts_metadata = '../nfts/metadata/'
-start_nft_number = 84
+start_nft_number = 85
 end_nft_number = 420
 
 # Ensure output directories exist
@@ -78,6 +78,8 @@ def generate_image_and_metadata(image_number):
 
     with open(os.path.join(path_to_nfts_metadata, f"{image_number}.json"), 'w') as metafile:
         json.dump(metadata, metafile, indent=4)
+
+    final_image.save(final_image_path)
 
     print(f"Generated NFT #{image_number} with image {final_image_path} and metadata.")
 

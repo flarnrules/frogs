@@ -3,7 +3,7 @@
         "lilypad.png": 10,
         "belly.png": 1,
         "rock.png": 5,
-        "barrel.png": 1
+        "barrel.png": 2
     },
     "eyes": {
         "down right.png": 12.5,
@@ -36,10 +36,11 @@
         "none.png": 30,
         "helicopter hat.png": 6.25,
         "cowboy hat.png": 6.25,
-        "poo.png": 8,
+        "poo.png": 5,
         "bob marley hat.png": 5,
         "crown.png": 0.5,
-        "bow": 3
+        "bow.png": 3,
+        "eyepatch.png": 1
     },
     "frog": {
         "starry night toad.png": 1,
@@ -77,7 +78,7 @@
         "frog kingdom.png": 1,
         "inside castle.png": 1,
         "wizard tower.png": 1,
-        "night city.png": 1
+        "night city.png": 2
     },
     "mouth": {
         "long tongue.png": 3.85,
@@ -88,15 +89,15 @@
         "pink tongue.png": 3.85,
         "fangs.png": 3.85,
         "fly thought.png": 3.85,
-        "blue tongue.png": 3.85,
-        "heron.png": 0.5,
+        "blue tongue.png": 1,
+        "heron.png": 1,
         "guiness book of world records - longest frog tongue in an nft.png": 1,
         "snaggletooth.png": 3.85,
         "very long tongue.png": 1,
         "absurdly long tongue.png": 1,
         "small tongue.png": 3.85,
         "dang that's a long tongue.png": 1,
-        "smirk.png": 20,
+        "smirk.png": 30,
         "ladyfrog thought.png": 3.85,
         "i wonder if this tongue is setting a record....png": 1,
         "tongue that is completely insanely long.png": 1,
@@ -104,7 +105,7 @@
         "heart thought.png": 3.85,
         "silly tongue.png": 3.85,
         "toothy.png": 3.85,
-        "plain.png": 30,
+        "plain.png": 20,
         "network.png": 3.85
     },
     "water": {
@@ -116,12 +117,12 @@
     "flies": {
         "4.png": 4,
         "7.png": 1,
-        "2.png": 11.11,
-        "3.png": 3,
-        "1.png": 5,
+        "2.png": 10,
+        "3.png": 5,
+        "1.png": 10,
         "5.png": 1,
         "6.png": 2,
-        "0.png": 30,
+        "0.png": 40,
         "8.png": 0.5
     },
     "accessory": {
@@ -129,9 +130,10 @@
         "cloak.png": 1,
         "none.png": 60,
         "snake.png": 1,
-        "chain.png": 25,
+        "chain.png": 20,
         "sceptre.png": 1,
         "red cloak.png": 1,
-        "suit and red tie.png": 10
+        "suit and red tie.png": 10,
+        "umbrella.png": 2
     }
 }
