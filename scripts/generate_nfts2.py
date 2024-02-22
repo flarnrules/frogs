@@ -7,7 +7,7 @@ from PIL import Image
 path_to_layers = '../layers/'
 path_to_nfts_images = '../nfts/images/'
 path_to_nfts_metadata = '../nfts/metadata/'
-start_nft_number = 85
+start_nft_number = 88
 end_nft_number = 420
 
 # Ensure output directories exist

@@ -40,7 +40,8 @@
         "bob marley hat.png": 5,
         "crown.png": 0.5,
         "bow.png": 3,
-        "eyepatch.png": 1
+        "eyepatch.png": 1,
+        "tophat.png": 2
     },
     "frog": {
         "starry night toad.png": 1,
@@ -134,6 +135,8 @@
         "sceptre.png": 1,
         "red cloak.png": 1,
         "suit and red tie.png": 10,
-        "umbrella.png": 2
+        "umbrella.png": 2,
+        "tuxedo.png": 1,
+        "monocle.png": 1
     }
 }
