@@ -1,0 +1,54 @@
+{
+    "name": "Frog 94",
+    "description": "Eclectic frogs inspired by the infamous Frogstar from the Smoker's Club.",
+    "attributes": [
+        {
+            "trait_type": "type",
+            "value": "generated"
+        },
+        {
+            "trait_type": "frames",
+            "value": 1
+        },
+        {
+            "trait_type": "background",
+            "value": "clouds"
+        },
+        {
+            "trait_type": "water",
+            "value": "none"
+        },
+        {
+            "trait_type": "perch",
+            "value": "rock"
+        },
+        {
+            "trait_type": "features",
+            "value": "rocks and flowers"
+        },
+        {
+            "trait_type": "frog",
+            "value": "green"
+        },
+        {
+            "trait_type": "headgear",
+            "value": "bob marley hat"
+        },
+        {
+            "trait_type": "eyes",
+            "value": "red"
+        },
+        {
+            "trait_type": "mouth",
+            "value": "smirk"
+        },
+        {
+            "trait_type": "accessory",
+            "value": "none"
+        },
+        {
+            "trait_type": "flies",
+            "value": ""
+        }
+    ]
+}

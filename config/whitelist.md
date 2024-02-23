@@ -1,3 +1,8 @@
+Proto Towers
+stars120pue6syyajg6wtj0339qa42a279xaj8km889lgx2lvw325leevs2s79h2 (SG721 - also the collection address)
+stars1sea7asx204m0qwvy09vr6un84w0mu3kwaydcq9r404d2gmwp9spq584xxp (minter)
+
+
 admin
 stars1wtcp7m7589vdmsse30rsrlt357dwy0qygc79uf
 
@@ -5,7 +10,7 @@ whitelist
 Friday Feb 23, 2024
 19:00 UTC - 23:00 UTC
 1:00 pm - 5:00 CT
-stars1snse0n436mrj3cnd7xzgckvxzh2k2cx3f0srmd39ueuunma9y0kqsz3vym
+stars19jnalyxh36s2htdu3cc944l9prgmncl3fm0pcd547net3w2dydmspkv6ly
 
 public
 5:05 CT
@@ -14,3 +19,13 @@ public
 ## for test
 contract
 stars1gc5aqlfvhvcqn685ena47f3anjce5v4fnxtkkzcfmtldlnjwyrcswl4zd9
+
+##
+stars1426tvz7ns994yt7l2n2dm4dna7p65y3ca09hwt
+stars1lytdjwqg85kcth37lmrx2v62p7lqp9v5lglzu7
+stars1964wg4qxpggdtld7s7w0pxk2fyt5m8x7z9ljte
+stars1lcdhe2j37s6cuapj00rpcknqk675xe2h7875mu
+stars1qs0zm2rmd3y8uu067pcd27xqc0kf6jhn0fnu0g
+stars1frsxrr40a43vkp2lulumfr532c8p7wkm0f4q38
+stars1045e828c6np43ahzqkqunh5velg5j8mpjtxrf7
+stars14kmmugcjvf6g2jdgrxk790j334ayxun4gmtwu8

@@ -3,32 +3,32 @@ import random
 import json
 from PIL import Image
 
-# Configuration
+# config
 path_to_layers = '../layers/'
 path_to_nfts_images = '../nfts/images/'
 path_to_nfts_metadata = '../nfts/metadata/'
-start_nft_number = 88
+start_nft_number = 101
 end_nft_number = 420
 
-# Ensure output directories exist
+# check if directories exist
 os.makedirs(path_to_nfts_images, exist_ok=True)
 os.makedirs(path_to_nfts_metadata, exist_ok=True)
 
-# Load rarities data
+# load rarities data from rarities.json file
 with open('../data/rarities.json') as infile:
     rarities = json.load(infile)
 
-# Select a trait based on rarity
+# select trait weighted rarities
 def select_trait(trait_rarities):
     traits, weights = zip(*trait_rarities.items())
     return random.choices(traits, weights, k=1)[0]
 
 def generate_image_and_metadata(image_number):
     selected_traits = {}
-    final_image = Image.new('RGBA', (1024, 1024))  # Final image size set to 1024x1024
+    final_image = Image.new('RGBA', (1024, 1024))  # scales up the image
     final_image_path = os.path.join(path_to_nfts_images, f"{image_number}.png")
 
-    # Flies emoji mapping
+    # fly emojis
     flies_emoji_map = {
         "0.png": "",
         "1.png": " 🪰 ",
@@ -38,7 +38,6 @@ def generate_image_and_metadata(image_number):
         "6.png": " 🪰 🪰 🪰 🪰 🪰 🪰 ",
         "7.png": " 🪰 🪰 🪰 🪰 🪰 🪰 🪰 ",
         "8.png": " 🪰 🪰 🪰 🪰 🪰 🪰 🪰 🪰 ",
-        # Add more mappings as needed
     }
 
     layer_order = [
@@ -48,7 +47,7 @@ def generate_image_and_metadata(image_number):
 
     for layer in layer_order:
         trait = select_trait(rarities.get(layer, {}))
-        if trait:  # Only proceed if a trait was selected
+        if trait:
             trait_path = os.path.join(path_to_layers, layer, trait)
             if os.path.exists(trait_path):
                 trait_image = Image.open(trait_path).convert('RGBA')
@@ -56,7 +55,7 @@ def generate_image_and_metadata(image_number):
                 final_image.paste(trait_image, (0, 0), trait_image)
             selected_traits[layer] = trait
 
-    # Generate attributes for metadata
+    # generate attributes for metadata
     attributes = [
         {"trait_type": "type", "value": "generated"},
         {"trait_type": "frames", "value": 1}
@@ -64,12 +63,12 @@ def generate_image_and_metadata(image_number):
 
     for key, value in selected_traits.items():
         if key == 'flies':
-            # Use the flies emoji map for the flies attribute
+            # uses flies emoji map from above
             attributes.append({"trait_type": key, "value": flies_emoji_map.get(value, "")})
         else:
             attributes.append({"trait_type": key, "value": value.split('.')[0]})
 
-    # Generate and save metadata
+    # generate and save metadata
     metadata = {
         "name": f"Frog {image_number}",
         "description": "Eclectic frogs inspired by the infamous Frogstar from the Smoker's Club.",
@@ -85,6 +84,6 @@ def generate_image_and_metadata(image_number):
 
 
 
-# Main loop to generate the specified range of images and metadata
+# runs the loop
 for i in range(start_nft_number, end_nft_number + 1):
     generate_image_and_metadata(i)

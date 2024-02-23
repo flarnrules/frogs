@@ -14,7 +14,8 @@
         "up left.png": 12.5,
         "up right.png": 12.5,
         "blue.png": 2,
-        "green.png": 2
+        "green.png": 2,
+        "cyclops.png": 1
     },
     "features": {
         "rocks.png": 25.0,
@@ -41,7 +42,8 @@
         "crown.png": 0.5,
         "bow.png": 3,
         "eyepatch.png": 1,
-        "tophat.png": 2
+        "tophat.png": 2,
+        "sailor.png": 1
     },
     "frog": {
         "starry night toad.png": 1,
@@ -79,7 +81,8 @@
         "frog kingdom.png": 1,
         "inside castle.png": 1,
         "wizard tower.png": 1,
-        "night city.png": 2
+        "night city.png": 2,
+        "lagoon.png": 1
     },
     "mouth": {
         "long tongue.png": 3.85,
@@ -118,7 +121,7 @@
     "flies": {
         "4.png": 4,
         "7.png": 1,
-        "2.png": 10,
+        "2.png": 8,
         "3.png": 5,
         "1.png": 10,
         "5.png": 1,
@@ -129,14 +132,15 @@
     "accessory": {
         "trident.png": 1,
         "cloak.png": 1,
-        "none.png": 60,
+        "none.png": 50,
         "snake.png": 1,
-        "chain.png": 20,
+        "chain.png": 25,
         "sceptre.png": 1,
         "red cloak.png": 1,
         "suit and red tie.png": 10,
         "umbrella.png": 2,
         "tuxedo.png": 1,
-        "monocle.png": 1
+        "monocle.png": 1,
+        "parrot.png": 1
     }
 }

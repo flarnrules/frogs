@@ -1,0 +1,54 @@
+{
+    "name": "Frog 100",
+    "description": "Eclectic frogs inspired by the infamous Frogstar from the Smoker's Club.",
+    "attributes": [
+        {
+            "trait_type": "type",
+            "value": "generated"
+        },
+        {
+            "trait_type": "frames",
+            "value": 1
+        },
+        {
+            "trait_type": "background",
+            "value": "forest"
+        },
+        {
+            "trait_type": "water",
+            "value": "none"
+        },
+        {
+            "trait_type": "perch",
+            "value": "lilypad"
+        },
+        {
+            "trait_type": "features",
+            "value": "rocks"
+        },
+        {
+            "trait_type": "frog",
+            "value": "red"
+        },
+        {
+            "trait_type": "headgear",
+            "value": "beanie"
+        },
+        {
+            "trait_type": "eyes",
+            "value": "down left"
+        },
+        {
+            "trait_type": "mouth",
+            "value": "fangs"
+        },
+        {
+            "trait_type": "accessory",
+            "value": "none"
+        },
+        {
+            "trait_type": "flies",
+            "value": " \ud83e\udeb0 \ud83e\udeb0 "
+        }
+    ]
+}
