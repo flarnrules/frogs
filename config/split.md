@@ -6,9 +6,9 @@ stars12jrc38pc09frc4v7fqdsrmwp6rlfmxxaswnqpsf24m6p7q3u6n6qua5yju - pt dao
 stars1mlxynkqd9js8tkdnkk0e27lgz7x9lt866n5r44 - smokers
 stars1c7l3lvqp53fdg4ux8yvemsf540s044ne29gwk4 - frogstar
 
-## contract address
+## splits contract address
 stars10t5xw60sh8vt65qz7j5935y6q6v08ppr0uadltgwsar52y34jvfsrxsde5
-
+stars10t5xw60sh8vt65qz7j5935y6q6v08ppr0uadltgwsar52y34jvfsrxsde5
 
 # testnet version
 ## wallets
@@ -24,3 +24,7 @@ stars1832s4hutpxeqtn9lf6l6fr0fpjhtkalrdk5g78u44cxgcla3zyqqlcujjw
 
 
 ![alt text](image.png)
+
+# Transactions
+1.
+2. 2/27/24 - 11F50D4D0E34F41C3822DE82F48DF9C04D4F564385CD08573DBED0A0408CCD2C

@@ -4,9 +4,9 @@ document.addEventListener('DOMContentLoaded', function() {
         let img = document.createElement('img');
         img.onerror = function() {
             // If PNG fails to load, try with GIF
-            this.src = `../nfts/images/${i}.gif`; // Update the path as needed
+            this.src = `../frog_day/nfts/images/${i}.gif`; // Update the path as needed
         };
-        img.src = `../nfts/images/${i}.png`; // Tries to load PNG first
+        img.src = `../frog_day/nfts/images/${i}.png`; // Tries to load PNG first
         grid.appendChild(img);
     }
 });

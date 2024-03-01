@@ -41,8 +41,8 @@ def generate_image_and_metadata(image_number):
     }
 
     layer_order = [
-        'background', 'water', 'perch', 'features', 'frog', 'headgear',
-        'eyes', 'mouth', 'accessory', 'flies',
+        'background', 'perch', 'frog','accessory', 'headgear',
+        'eyes', 'mouth', 'flies',
     ]
 
     for layer in layer_order:
@@ -70,8 +70,8 @@ def generate_image_and_metadata(image_number):
 
     # generate and save metadata
     metadata = {
-        "name": f"Frog {image_number}",
-        "description": "Eclectic frogs inspired by the infamous Frogstar from the Smoker's Club.",
+        "name": f"{image_number}",
+        "description": "Profile picture frogs inspired by the nft collection Picture Day and launched on leap day ~February 29, 2024~. First 420 airdropped to holders of frogs, the nft collection of 420 digital frogs on Stargaze.",
         "attributes": attributes
     }
 
