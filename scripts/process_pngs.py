@@ -117,6 +117,15 @@ def fade_edges_to_color_corrected(image, fade_color=(255, 239, 213), fade_intens
 
     return faded_image
 
+def calculate_interior_mask(frame_path):
+    frame = Image.open(frame_path).convert("RGBA")
+    center = (frame.width // 2, frame.height // 2)
+    angles = range(0, 360, 10)
+
+    edge_points = find_edge_points(frame, center, angles) #from interior_mask.py
+    mask = approximate_interior_mask(frame, edge_points) #from interior_mask.py
+
+    return mask #used in delete_pixels function
 
 def delete_pixels(processed_image, frame_path):
     frame = Image.open(frame_path).convert("RGBA")
@@ -129,7 +138,7 @@ def delete_pixels(processed_image, frame_path):
 
     for x in range(width):
         for y in range(height):
-            # If the pixel is outside the interior mask (mask pixel is 0) and the frame pixel is transparent
+            # if the pixel is outside the interior mask (mask pixel is 0) and the frame pixel is transparent
             if interior_mask_pixels[x, y] == 0 and frame_pixels[x, y][3] == 0:
                 # Delete the pixel in the processed image by setting it to fully transparent
                 processed_pixels[x, y] = (0, 0, 0, 0)
@@ -174,15 +183,7 @@ def update_metadata_with_frame(nft_number, frame_name):
         json.dump(metadata, f, indent=4)
 
 
-def calculate_interior_mask(frame_path):
-    frame = Image.open(frame_path).convert("RGBA")
-    center = (frame.width // 2, frame.height // 2)
-    angles = range(0, 360, 10)  # You might adjust the step for finer granularity
 
-    edge_points = find_edge_points(frame, center, angles)
-    mask = approximate_interior_mask(frame, edge_points)
-
-    return mask
 
 def process_image_and_metadata(input_path, output_path, nft_number):
     original_image = Image.open(input_path).convert("RGBA")
