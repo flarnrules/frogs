@@ -1,6 +1,6 @@
 #imageGrid {
     display: grid;
-    grid-template-columns: repeat(25, 1fr);
+    grid-template-columns: repeat(10, 1fr);
     gap: 10px; /* Adjust space between images */
 }
 

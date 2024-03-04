@@ -20,7 +20,7 @@ def approximate_interior_mask(frame, edge_points):
     mask = Image.new('L', frame.size, 0)
     draw = ImageDraw.Draw(mask)
     
-    # Assuming the shape is elliptical, we can use the bounding box of the edge points
+    # assumes shape is ellipse or ellipse adjacent
     min_x = min([point[0] for point in edge_points])
     max_x = max([point[0] for point in edge_points])
     min_y = min([point[1] for point in edge_points])
@@ -40,7 +40,7 @@ def color_exterior(frame_path, exterior_color=(0, 0, 255)):
     
     mask = approximate_interior_mask(frame, edge_points)
     
-    # Create an image for the exterior color
+    # picks a color for the exterior
     exterior = Image.new("RGBA", frame.size, exterior_color + (255,))
     interior = Image.composite(frame, exterior, mask)
     
