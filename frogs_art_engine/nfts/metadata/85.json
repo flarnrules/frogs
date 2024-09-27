@@ -1,0 +1,18 @@
+{
+    "name": "NFT #85",
+    "description": "Some frogs.",
+    "attributes": [
+        {
+            "trait_type": "Background",
+            "value": "Green Field"
+        },
+        {
+            "trait_type": "Character",
+            "value": "Blue Frog"
+        },
+        {
+            "trait_type": "Object",
+            "value": "Unicorn Horn"
+        }
+    ]
+}

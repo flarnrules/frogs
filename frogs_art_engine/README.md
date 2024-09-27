@@ -1,6 +1,10 @@
 # Frogs Art Engine
 Welcome to the Frogs Art Engine.
 
+## Quick start
+If you have python3 installed, and you also have a bunch of libraries installed, you can just run `python3 generate_nfts.py`
+
+If you don't have all that, you'll need to install Python3 and a bunch of libraries.
 
 ## What is the Frogs Art Engine
 It is a python based image generator. It works best with square shaped images, and it can be used as the building blocks for an nft project, or other project where you want to generate some images using layers. 

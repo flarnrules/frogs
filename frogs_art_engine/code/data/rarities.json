@@ -1,0 +1,19 @@
+{
+    "core_layers/object": {
+        "unicorn_horn.png": 33.33,
+        "halo.png": 33.33,
+        "poo.png": 33.34
+    },
+    "core_layers/background": {
+        "forest.png": 20.0,
+        "sunny day.png": 20.0,
+        "green and purple lazer.png": 20.0,
+        "blue and pink lazer.png": 20.0,
+        "green field.png": 20.0
+    },
+    "core_layers/character": {
+        "blue_frog.png": 33.33,
+        "green_frog.png": 33.33,
+        "red_frog.png": 33.34
+    }
+}

@@ -1,0 +1,256 @@
+.
+├── README.md
+├── code
+│   ├── __init__.py
+│   ├── __pycache__
+│   │   └── __init__.cpython-311.pyc
+│   ├── data
+│   │   ├── quotes.json
+│   │   └── rarities.json
+│   └── scripts
+│       ├── __init__.py
+│       ├── __pycache__
+│       │   ├── __init__.cpython-311.pyc
+│       │   ├── generate_image.cpython-311.pyc
+│       │   ├── generate_metadata.cpython-311.pyc
+│       │   ├── rarities.cpython-311.pyc
+│       │   └── utils.cpython-311.pyc
+│       ├── generate_image.py
+│       ├── generate_metadata.py
+│       ├── rarities.py
+│       ├── setup_layer_order.py
+│       └── utils.py
+├── config.json
+├── directory_structure.txt
+├── generate_nfts.py
+├── media
+│   ├── images
+│   └── layers
+│       ├── character_layers
+│       ├── core_layers
+│       │   ├── background
+│       │   │   ├── blue and pink lazer.png
+│       │   │   ├── forest.png
+│       │   │   ├── green and purple lazer.png
+│       │   │   ├── green field.png
+│       │   │   └── sunny day.png
+│       │   ├── character
+│       │   │   ├── blue_frog.png
+│       │   │   ├── green_frog.png
+│       │   │   └── red_frog.png
+│       │   └── object
+│       │       ├── halo.png
+│       │       ├── poo.png
+│       │       └── unicorn_horn.png
+│       ├── frames
+│       └── popins
+├── metaform.html
+├── nfts
+│   ├── images
+│   │   ├── 1.png
+│   │   ├── 10.png
+│   │   ├── 100.png
+│   │   ├── 11.png
+│   │   ├── 12.png
+│   │   ├── 13.png
+│   │   ├── 14.png
+│   │   ├── 15.png
+│   │   ├── 16.png
+│   │   ├── 17.png
+│   │   ├── 18.png
+│   │   ├── 19.png
+│   │   ├── 2.png
+│   │   ├── 20.png
+│   │   ├── 21.png
+│   │   ├── 22.png
+│   │   ├── 23.png
+│   │   ├── 24.png
+│   │   ├── 25.png
+│   │   ├── 26.png
+│   │   ├── 27.png
+│   │   ├── 28.png
+│   │   ├── 29.png
+│   │   ├── 3.png
+│   │   ├── 30.png
+│   │   ├── 31.png
+│   │   ├── 32.png
+│   │   ├── 33.png
+│   │   ├── 34.png
+│   │   ├── 35.png
+│   │   ├── 36.png
+│   │   ├── 37.png
+│   │   ├── 38.png
+│   │   ├── 39.png
+│   │   ├── 4.png
+│   │   ├── 40.png
+│   │   ├── 41.png
+│   │   ├── 42.png
+│   │   ├── 43.png
+│   │   ├── 44.png
+│   │   ├── 45.png
+│   │   ├── 46.png
+│   │   ├── 47.png
+│   │   ├── 48.png
+│   │   ├── 49.png
+│   │   ├── 5.png
+│   │   ├── 50.png
+│   │   ├── 51.png
+│   │   ├── 52.png
+│   │   ├── 53.png
+│   │   ├── 54.png
+│   │   ├── 55.png
+│   │   ├── 56.png
+│   │   ├── 57.png
+│   │   ├── 58.png
+│   │   ├── 59.png
+│   │   ├── 6.png
+│   │   ├── 60.png
+│   │   ├── 61.png
+│   │   ├── 62.png
+│   │   ├── 63.png
+│   │   ├── 64.png
+│   │   ├── 65.png
+│   │   ├── 66.png
+│   │   ├── 67.png
+│   │   ├── 68.png
+│   │   ├── 69.png
+│   │   ├── 7.png
+│   │   ├── 70.png
+│   │   ├── 71.png
+│   │   ├── 72.png
+│   │   ├── 73.png
+│   │   ├── 74.png
+│   │   ├── 75.png
+│   │   ├── 76.png
+│   │   ├── 77.png
+│   │   ├── 78.png
+│   │   ├── 79.png
+│   │   ├── 8.png
+│   │   ├── 80.png
+│   │   ├── 81.png
+│   │   ├── 82.png
+│   │   ├── 83.png
+│   │   ├── 84.png
+│   │   ├── 85.png
+│   │   ├── 86.png
+│   │   ├── 87.png
+│   │   ├── 88.png
+│   │   ├── 89.png
+│   │   ├── 9.png
+│   │   ├── 90.png
+│   │   ├── 91.png
+│   │   ├── 92.png
+│   │   ├── 93.png
+│   │   ├── 94.png
+│   │   ├── 95.png
+│   │   ├── 96.png
+│   │   ├── 97.png
+│   │   ├── 98.png
+│   │   └── 99.png
+│   └── metadata
+│       ├── 1.json
+│       ├── 10.json
+│       ├── 100.json
+│       ├── 11.json
+│       ├── 12.json
+│       ├── 13.json
+│       ├── 14.json
+│       ├── 15.json
+│       ├── 16.json
+│       ├── 17.json
+│       ├── 18.json
+│       ├── 19.json
+│       ├── 2.json
+│       ├── 20.json
+│       ├── 21.json
+│       ├── 22.json
+│       ├── 23.json
+│       ├── 24.json
+│       ├── 25.json
+│       ├── 26.json
+│       ├── 27.json
+│       ├── 28.json
+│       ├── 29.json
+│       ├── 3.json
+│       ├── 30.json
+│       ├── 31.json
+│       ├── 32.json
+│       ├── 33.json
+│       ├── 34.json
+│       ├── 35.json
+│       ├── 36.json
+│       ├── 37.json
+│       ├── 38.json
+│       ├── 39.json
+│       ├── 4.json
+│       ├── 40.json
+│       ├── 41.json
+│       ├── 42.json
+│       ├── 43.json
+│       ├── 44.json
+│       ├── 45.json
+│       ├── 46.json
+│       ├── 47.json
+│       ├── 48.json
+│       ├── 49.json
+│       ├── 5.json
+│       ├── 50.json
+│       ├── 51.json
+│       ├── 52.json
+│       ├── 53.json
+│       ├── 54.json
+│       ├── 55.json
+│       ├── 56.json
+│       ├── 57.json
+│       ├── 58.json
+│       ├── 59.json
+│       ├── 6.json
+│       ├── 60.json
+│       ├── 61.json
+│       ├── 62.json
+│       ├── 63.json
+│       ├── 64.json
+│       ├── 65.json
+│       ├── 66.json
+│       ├── 67.json
+│       ├── 68.json
+│       ├── 69.json
+│       ├── 7.json
+│       ├── 70.json
+│       ├── 71.json
+│       ├── 72.json
+│       ├── 73.json
+│       ├── 74.json
+│       ├── 75.json
+│       ├── 76.json
+│       ├── 77.json
+│       ├── 78.json
+│       ├── 79.json
+│       ├── 8.json
+│       ├── 80.json
+│       ├── 81.json
+│       ├── 82.json
+│       ├── 83.json
+│       ├── 84.json
+│       ├── 85.json
+│       ├── 86.json
+│       ├── 87.json
+│       ├── 88.json
+│       ├── 89.json
+│       ├── 9.json
+│       ├── 90.json
+│       ├── 91.json
+│       ├── 92.json
+│       ├── 93.json
+│       ├── 94.json
+│       ├── 95.json
+│       ├── 96.json
+│       ├── 97.json
+│       ├── 98.json
+│       └── 99.json
+└── web
+    ├── index.html
+    ├── script.js
+    └── style.css
+
+19 directories, 234 files

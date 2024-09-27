@@ -1,0 +1,16 @@
+{
+  "nft_start_number": 1,
+  "nft_end_number": 100,
+  "output_images_path": "nfts/images/",
+  "output_metadata_path": "nfts/metadata/",
+  "layers_path": "media/layers/",
+  "quotes_path": "code/data/quotes.json",
+  "background_color": [0, 0, 0],
+  "image_size": [1024, 1024],
+  "none_probabilities": {
+      "object": 0.2
+  },
+  "metadata": {
+      "description": "Some frogs."
+  }
+}
