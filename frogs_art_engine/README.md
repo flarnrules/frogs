@@ -2,7 +2,7 @@
 Welcome to the Frogs Art Engine.
 
 ## Quick start
-If you have python3 installed, and you also have a bunch of libraries installed, you can just run `python3 generate_nfts.py`
+If you have python3 installed, and you also have a bunch of libraries installed, you can just run `python3 generate_nfts.py` in the root directory.
 
 If you don't have all that, you'll need to install Python3 and a bunch of libraries.
 
