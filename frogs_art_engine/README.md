@@ -22,6 +22,8 @@ The following collections are in process:
 - Puppy Cerberus
 - Cosmic Gumball Machine
 - Unnamed Unicorn Project
+- Shitberus
+
 
 ## How does the Frogs Art Engine Work?
 
