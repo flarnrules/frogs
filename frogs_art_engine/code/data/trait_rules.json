@@ -1,0 +1,7 @@
+{
+  "core_layers/character/blue_frog.png": {
+    "disallow": {
+      "core_layers/background": ["blue and pink lazer.png", "forest.png", "green and purple lazer.png", "green field.png"]
+    }
+  }
+}

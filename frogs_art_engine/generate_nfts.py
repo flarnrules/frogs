@@ -19,14 +19,11 @@ def get_available_layers(layers_path):
     return available_layers
 
 def setup_layer_order(layers_path, config):
-    # Check if layers_order is specified in config.json
     layers_order = config.get('layers_order', None)
     if layers_order:
         return layers_order
 
-    # If not specified, retrieve available layers
     available_layers = get_available_layers(layers_path)
-
     if not available_layers:
         print("No layers found in the specified layers path.")
         sys.exit(1)
@@ -35,7 +32,6 @@ def setup_layer_order(layers_path, config):
     for idx, layer in enumerate(available_layers):
         print(f"{idx + 1}: {layer}")
 
-    # Prompt the user to specify the layer order
     print("\nSpecify the layer order by entering the numbers separated by commas.")
     print("For example, to use the order 'background', 'character', 'object', enter: 1,2,3")
     print("Press Enter to use the default order.")
@@ -55,7 +51,6 @@ def setup_layer_order(layers_path, config):
     return layers_order
 
 def main():
-    # Load configurations
     config = load_config('config.json')
 
     start_nft_number = config['nft_start_number']
@@ -64,74 +59,124 @@ def main():
     output_metadata_path = config['output_metadata_path']
     layers_path = config['layers_path']
 
-    # Ensure output directories exist
     os.makedirs(output_images_path, exist_ok=True)
     os.makedirs(output_metadata_path, exist_ok=True)
 
-    # Automatically run rarities.py
+    # Run rarities script
     rarities_script_path = os.path.join('code', 'scripts', 'rarities.py')
     subprocess.run(['python', rarities_script_path], check=True)
 
-    # Load rarities data
-    rarities_path = os.path.join('code', 'data', 'rarities.json')
-    if not os.path.exists(rarities_path):
-        print(f"rarities.json not found at {rarities_path}. Please check for errors.")
-        sys.exit(1)
-    with open(rarities_path, 'r') as f:
+    # Load rarities
+    with open(os.path.join('code', 'data', 'rarities.json'), 'r') as f:
         rarities = json.load(f)
 
-    # Get or set up layers order
+    # Load trait rules
+    rules_path = os.path.join('code', 'data', 'trait_rules.json')
+    if os.path.exists(rules_path):
+        with open(rules_path, 'r') as f:
+            trait_rules = json.load(f)
+    else:
+        trait_rules = {}
+
+    # Get layer order
     layers_order = setup_layer_order(layers_path, config)
 
-    # Validate layers in layers_order
-    valid_layers_order = []
-    for layer in layers_order:
-        layer_path = os.path.join(layers_path, layer)
-        if not os.path.isdir(layer_path):
-            print(f"Layer '{layer}' does not exist in '{layers_path}'. Removing from layers_order.")
-        else:
-            valid_layers_order.append(layer)
-    layers_order = valid_layers_order
-
+    # Validate layer paths
+    layers_order = [
+        layer for layer in layers_order
+        if os.path.isdir(os.path.join(layers_path, layer))
+    ]
     if not layers_order:
         print("No valid layers to process. Exiting.")
         sys.exit(1)
 
+    # Dynamically determine which layers define rules
+    rule_layers = [
+        layer for layer in sorted(set(os.path.dirname(k) for k in trait_rules.keys()))
+        if layer in layers_order
+    ]
+    print(f"\n🔧 Dynamic rule-layers detected for prepass: {rule_layers}")
+
     for image_number in range(start_nft_number, end_nft_number + 1):
         traits = {}
+        disallowed_by_layer = {}
 
+        # --- PREPASS: select all rule-triggering layers first ---
+        for rule_layer in rule_layers:
+            disallowed = disallowed_by_layer.get(rule_layer, [])
+            trait = select_trait(rarities.get(rule_layer, {}), disallowed_traits=disallowed)
+            if not trait:
+                print(f"No valid trait for rule-layer '{rule_layer}'. Skipping NFT.")
+                continue
+
+            traits[rule_layer] = trait
+
+            full_path = os.path.join(layers_path, rule_layer, trait)
+            layer_trait_key = os.path.relpath(full_path, start='media/layers').replace('\\', '/')
+
+            print(f"\n[Rules Prepass] {rule_layer}/{trait} → {layer_trait_key}")
+            rule = trait_rules.get(layer_trait_key)
+            if rule and "disallow" in rule:
+                for target_layer, disallowed_traits in rule["disallow"].items():
+                    print(f"  🚫 Pre-disallowing in {target_layer}: {disallowed_traits}")
+                    disallowed_by_layer.setdefault(target_layer, []).extend(disallowed_traits)
+
+        # --- MAIN PASS: loop through the rest of the layers ---
         for layer in layers_order:
-            layer_rarity = rarities.get(layer, {})
-            if not layer_rarity:
-                print(f"No rarities found for layer '{layer}'. Skipping this layer.")
+            if layer in traits:
+                continue  # Already handled in prepass
+
+            disallowed = disallowed_by_layer.get(layer, [])
+            trait = select_trait(rarities.get(layer, {}), disallowed_traits=disallowed)
+            if not trait:
+                print(f"No valid trait for layer '{layer}' after applying disallowed list.")
                 continue
-            trait = select_trait(layer_rarity)
-            if trait is None:
-                print(f"No trait selected for layer '{layer}'. Skipping this layer.")
-                continue
+
+            if trait in disallowed:
+                print(f"  ❌ Selected disallowed trait '{trait}' in layer '{layer}' — logic error!")
             traits[layer] = trait
 
-            # Handle trait-specific layers
+            full_path = os.path.join(layers_path, layer, trait)
+            layer_trait_key = os.path.relpath(full_path, start='media/layers').replace('\\', '/')
+
+            print(f"\nChecking for trait rule:")
+            print(f"  Trait: {trait}")
+            print(f"  Layer: {layer}")
+            print(f"  Full path: {full_path}")
+            print(f"  Rel key for rules: {layer_trait_key}")
+
+            rule = trait_rules.get(layer_trait_key)
+            if rule:
+                print(f"  🔎 Rule found: {rule}")
+                if "disallow" in rule:
+                    for target_layer, disallowed_traits in rule["disallow"].items():
+                        print(f"  🚫 Disallowing in layer '{target_layer}': {disallowed_traits}")
+                        disallowed_by_layer.setdefault(target_layer, []).extend(disallowed_traits)
+            else:
+                print(f"  ⚠️ No rule matched for: {layer_trait_key}")
+
+            # Trait-specific layers
             trait_name = os.path.splitext(trait)[0].replace(' ', '_')
             trait_specific_layer_path = os.path.join(layers_path, layer, f"{trait_name}_layers")
             if os.path.isdir(trait_specific_layer_path):
-                # Get sub-layers
-                sub_layers = [d for d in os.listdir(trait_specific_layer_path)
-                              if os.path.isdir(os.path.join(trait_specific_layer_path, d))]
+                sub_layers = [
+                    d for d in os.listdir(trait_specific_layer_path)
+                    if os.path.isdir(os.path.join(trait_specific_layer_path, d))
+                ]
                 for sub_layer in sub_layers:
-                    sub_layer_full_name = os.path.join(layer, f"{trait_name}_layers", sub_layer)
-                    sub_layer_rarity = rarities.get(sub_layer_full_name, {})
-                    if not sub_layer_rarity:
-                        print(f"No rarities found for sub-layer '{sub_layer_full_name}'. Skipping.")
+                    sub_layer_key = os.path.join(layer, f"{trait_name}_layers", sub_layer)
+                    sub_rarity = rarities.get(sub_layer_key, {})
+                    if not sub_rarity:
+                        print(f"No rarities found for sub-layer '{sub_layer_key}'. Skipping.")
                         continue
-                    sub_trait = select_trait(sub_layer_rarity)
-                    if sub_trait is None:
-                        print(f"No trait selected for sub-layer '{sub_layer_full_name}'. Skipping.")
-                        continue
-                    traits[sub_layer_full_name] = sub_trait
+                    sub_trait = select_trait(sub_rarity)
+                    if sub_trait:
+                        traits[sub_layer_key] = sub_trait
+                    else:
+                        print(f"No trait selected for sub-layer '{sub_layer_key}'.")
 
         if not traits:
-            print(f"No traits selected for NFT #{image_number}. Skipping generation.")
+            print(f"No traits selected for NFT #{image_number}. Skipping.")
             continue
 
         # Generate image
@@ -145,7 +190,7 @@ def main():
         with open(metadata_path, 'w') as metafile:
             json.dump(metadata, metafile, indent=4)
 
-        print(f"Generated NFT #{image_number} with image {final_image_path} and metadata.")
+        print(f"✅ Generated NFT #{image_number} with image {final_image_path} and metadata.")
 
 if __name__ == '__main__':
     main()

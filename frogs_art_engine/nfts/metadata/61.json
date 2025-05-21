@@ -3,16 +3,16 @@
     "description": "Some frogs.",
     "attributes": [
         {
-            "trait_type": "Background",
-            "value": "Green Field"
+            "trait_type": "Character",
+            "value": "Blue Frog"
         },
         {
-            "trait_type": "Character",
-            "value": "Green Frog"
+            "trait_type": "Background",
+            "value": "Sunny Day"
         },
         {
             "trait_type": "Object",
-            "value": "Halo"
+            "value": "Unicorn Horn"
         }
     ]
 }

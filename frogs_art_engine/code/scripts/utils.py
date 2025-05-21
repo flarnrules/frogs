@@ -11,11 +11,13 @@ def get_trait_files(path):
     return [f for f in os.listdir(path)
             if os.path.isfile(os.path.join(path, f)) and not f.startswith('.')]
 
-def select_trait(trait_rarities):
-    if not trait_rarities:
+def select_trait(rarity_dict, disallowed_traits=None):
+    disallowed_traits = disallowed_traits or []
+    available = {k: v for k, v in rarity_dict.items() if k not in disallowed_traits}
+    if not available:
         return None
-    traits, weights = zip(*trait_rarities.items())
-    weights = [float(w) for w in weights]
+    traits = list(available.keys())
+    weights = list(available.values())
     return random.choices(traits, weights=weights, k=1)[0]
 
 def format_trait_name(file_name):
