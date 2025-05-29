@@ -9,18 +9,18 @@ INPUT_IMAGE_PATH = "inputs/frog.png"
 INPUT_IMAGE_FOLDER = "inputs/images"
 INPUT_GIF_PATH = "inputs/red_yellow2.gif"
 OUTPUT_IMAGE_FOLDER = "outputs/images"
-OUTPUT_GIF_PATH = "outputs/red_yellow18-2.gif"
+OUTPUT_GIF_PATH = "outputs/gifs/red_yellow3k.gif"
 
 # === Emoji Library Settings ===
 EMOJI_LIBRARY = "Noto Emoji"
 EMOJI_SIZE = "72"
 
 # === Appearance Settings ===
-OUTPUT_WIDTH_RANGE = (18, 19)
+OUTPUT_WIDTH_RANGE = (128, 129) # each number must be different
 ROWS_TO_COLUMNS = 1
 BACKGROUND_COLOR = (0, 0, 0, 255)
 TRIM_PIXELS = 0
-FINAL_SIZE = (1000, 1000)
+FINAL_SIZE = (3000, 3000)
 
 # === Derived Paths ===
 BASE_DIR = os.path.dirname(__file__)
