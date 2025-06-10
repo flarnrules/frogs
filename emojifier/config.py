@@ -5,7 +5,7 @@ MEDIA_TYPE = "image"           # "image", "gif", "video"
 PROCESS_SCOPE = "single"       # "single", "folder"
 
 # === Input / Output Paths ===
-INPUT_IMAGE_PATH = "inputs/britannia_color.png"
+INPUT_IMAGE_PATH = "inputs/the_frog_and_the_lizard2.png"
 INPUT_IMAGE_FOLDER = "inputs/images"
 INPUT_GIF_PATH = "inputs/red_yellow2.gif"
 OUTPUT_IMAGE_FOLDER = "outputs/images"
@@ -16,7 +16,7 @@ EMOJI_LIBRARY = "Noto Emoji" #"Noto Emoji" , "OpenMoji"
 EMOJI_SIZE = "72"
 
 # === Appearance Settings ===
-OUTPUT_WIDTH_RANGE = (100, 101) # each number must be different
+OUTPUT_WIDTH_RANGE = (128, 216) # each number must be different
 ROWS_TO_COLUMNS = 1
 BACKGROUND_COLOR = (0, 0, 0, 255)
 TRIM_PIXELS = 0
