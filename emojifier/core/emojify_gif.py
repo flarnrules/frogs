@@ -4,7 +4,7 @@ import os
 import time
 from PIL import Image, ImageSequence
 import tempfile
-from emojifier.emojify_image import emojify_image
+from core.emojify_image import emojify_image
 
 def emojify_gif(input_gif_path, output_gif_path):
     print(f"🚀 Starting emojification of GIF: {input_gif_path}")

@@ -6,7 +6,7 @@ import numpy as np
 from PIL import Image, ImageOps
 from scipy.spatial import KDTree
 
-from emojifier.config import (
+from config.config import (
     EMOJI_FOLDER,
     EMOJI_COLOR_INDEX,
     OUTPUT_WIDTH_RANGE,

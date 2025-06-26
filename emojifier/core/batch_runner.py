@@ -1,13 +1,13 @@
 # emojifier/batch_runner.py
 
 import os
-from emojifier.config import (
+from config.config import (
     PROCESS_SCOPE,
     INPUT_IMAGE_PATH,
     INPUT_IMAGE_FOLDER,
     OUTPUT_IMAGE_FOLDER
 )
-from emojifier.emojify_image import emojify_image
+from core.emojify_image import emojify_image
 
 def run_batch():
     os.makedirs(OUTPUT_IMAGE_FOLDER, exist_ok=True)
