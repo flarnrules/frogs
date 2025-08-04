@@ -10,6 +10,11 @@
   "none_probabilities": {
       "object": 0.2
   },
+  "layers_order": [
+    "core_layers/background",
+    "core_layers/character",
+    "core_layers/object"
+  ],
   "metadata": {
       "description": "Some frogs."
   }

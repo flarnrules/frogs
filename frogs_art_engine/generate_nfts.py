@@ -81,6 +81,13 @@ def main():
     # Get layer order
     layers_order = setup_layer_order(layers_path, config)
 
+    # Update config and save back to file if auto_update_config is True
+    if 'layers_order' not in config and config.get('auto_update_config', True):
+        config['layers_order'] = layers_order
+        with open("config.json", "w") as f:
+            json.dump(config, f, indent=4)
+        print("📝 Updated config.json with detected layer order.")
+
     # Validate layer paths
     layers_order = [
         layer for layer in layers_order

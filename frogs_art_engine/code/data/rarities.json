@@ -12,8 +12,8 @@
         "green field.png": 20.0
     },
     "core_layers/character": {
-        "blue_frog.png": 100.0,
-        "green_frog.png": 1.0,
-        "red_frog.png": -1.0
+        "blue_frog.png": 33.0,
+        "green_frog.png": 33.0,
+        "red_frog.png": 34.0
     }
 }
