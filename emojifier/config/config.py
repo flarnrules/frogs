@@ -16,14 +16,13 @@ EMOJI_LIBRARY = "Noto Emoji" #"Noto Emoji" , "OpenMoji"
 EMOJI_SIZE = "72"
 
 # === Appearance Settings ===
-OUTPUT_WIDTH_RANGE = (128, 216) # each number must be different
-ROWS_TO_COLUMNS = 1
+OUTPUT_WIDTH = 128
 BACKGROUND_COLOR = (0, 0, 0, 255)
 TRIM_PIXELS = 0
 FINAL_SIZE = (3000, 3000)
 
 # === Derived Paths ===
-BASE_DIR = os.path.dirname(__file__)
+BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 EMOJI_DATA_DIR = os.path.join(BASE_DIR, "emoji_data")
 EMOJI_IMAGES_DIR = os.path.join(EMOJI_DATA_DIR, "emoji_images")
 EMOJI_COLOR_DIR = os.path.join(EMOJI_DATA_DIR, "emoji_color_data")
