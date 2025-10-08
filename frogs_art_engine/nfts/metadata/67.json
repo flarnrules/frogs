@@ -12,7 +12,11 @@
         },
         {
             "trait_type": "Object",
-            "value": "Unicorn Horn"
+            "value": "Poo"
+        },
+        {
+            "trait_type": "Type",
+            "value": "Original"
         }
     ]
 }

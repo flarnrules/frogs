@@ -7,8 +7,8 @@ def get_resized_dimensions(image_path, final_width, verbose=True):
         final_height = int(final_width * aspect_ratio)
 
         if verbose:
-            print(f"[INFO] Original size: {original_width}x{original_height}")
-            print(f"[INFO] Calculated aspect ratio: {aspect_ratio:.4f}")
-            print(f"[INFO] Final resized dimensions: {final_width}x{final_height}")
+            print(f"[INFO] Input image size: {original_width}x{original_height} px")
+            print(f"[INFO] Emoji grid dimensions: {final_width}x{final_height} (W x H)")
+            print(f"[INFO] Aspect ratio: {aspect_ratio:.4f}")
 
         return final_width, final_height

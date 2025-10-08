@@ -12,7 +12,11 @@
         },
         {
             "trait_type": "Object",
-            "value": "Poo"
+            "value": "Halo"
+        },
+        {
+            "trait_type": "Type",
+            "value": "Original"
         }
     ]
 }

@@ -4,15 +4,19 @@
     "attributes": [
         {
             "trait_type": "Character",
-            "value": "Green Frog"
+            "value": "Red Frog"
         },
         {
             "trait_type": "Background",
-            "value": "Green Field"
+            "value": "Forest"
         },
         {
             "trait_type": "Object",
-            "value": "Halo"
+            "value": "Poo"
+        },
+        {
+            "trait_type": "Type",
+            "value": "Original"
         }
     ]
 }

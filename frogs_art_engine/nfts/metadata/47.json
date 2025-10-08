@@ -8,11 +8,15 @@
         },
         {
             "trait_type": "Background",
-            "value": "Blue And Pink Lazer"
+            "value": "Forest"
         },
         {
             "trait_type": "Object",
-            "value": "Unicorn Horn"
+            "value": "Halo"
+        },
+        {
+            "trait_type": "Type",
+            "value": "Original"
         }
     ]
 }

@@ -4,7 +4,7 @@
     "attributes": [
         {
             "trait_type": "Character",
-            "value": "Blue Frog"
+            "value": "Green Frog"
         },
         {
             "trait_type": "Background",
@@ -13,6 +13,18 @@
         {
             "trait_type": "Object",
             "value": "Halo"
+        },
+        {
+            "trait_type": "Type",
+            "value": "Emoji"
+        },
+        {
+            "trait_type": "Emoji set",
+            "value": "Noto Emoji"
+        },
+        {
+            "trait_type": "Emoji width",
+            "value": "82"
         }
     ]
 }

@@ -4,15 +4,19 @@
     "attributes": [
         {
             "trait_type": "Character",
-            "value": "Red Frog"
+            "value": "Green Frog"
         },
         {
             "trait_type": "Background",
-            "value": "Blue And Pink Lazer"
+            "value": "Sunny Day"
         },
         {
             "trait_type": "Object",
             "value": "Unicorn Horn"
+        },
+        {
+            "trait_type": "Type",
+            "value": "Original"
         }
     ]
 }

@@ -8,11 +8,15 @@
         },
         {
             "trait_type": "Background",
-            "value": "Green And Purple Lazer"
+            "value": "Green Field"
         },
         {
             "trait_type": "Object",
-            "value": "Halo"
+            "value": "Poo"
+        },
+        {
+            "trait_type": "Type",
+            "value": "Original"
         }
     ]
 }

@@ -1,10 +1,11 @@
 # emojifier/emojify_gif.py
+
 import os
 import time
 import tempfile
 from PIL import Image, ImageSequence
 from core.emojify_image import emojify_image
-from config.config import OUTPUT_WIDTH
+from config import config  # ✅ dynamic access to config
 
 def emojify_gif(input_gif_path, output_gif_path):
     print(f"🚀 Starting emojification of GIF: {input_gif_path}")
@@ -28,7 +29,7 @@ def emojify_gif(input_gif_path, output_gif_path):
                 emojified_path = os.path.join(temp_dir, f"emojified_{i:03}.png")
 
                 frame.convert("RGB").save(frame_path)
-                emojify_image(frame_path, emojified_path, output_width=OUTPUT_WIDTH)
+                emojify_image(frame_path, emojified_path, output_width=config.OUTPUT_WIDTH)
                 emojified_frame = Image.open(emojified_path).convert("RGBA")
 
                 frames.append(emojified_frame)

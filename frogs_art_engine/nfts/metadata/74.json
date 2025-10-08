@@ -8,11 +8,23 @@
         },
         {
             "trait_type": "Background",
-            "value": "Forest"
+            "value": "Green Field"
         },
         {
             "trait_type": "Object",
-            "value": "Poo"
+            "value": "Halo"
+        },
+        {
+            "trait_type": "Type",
+            "value": "Emoji"
+        },
+        {
+            "trait_type": "Emoji set",
+            "value": "Noto Emoji"
+        },
+        {
+            "trait_type": "Emoji width",
+            "value": "103"
         }
     ]
 }

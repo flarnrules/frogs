@@ -59,6 +59,9 @@ def main():
     output_metadata_path = config['output_metadata_path']
     layers_path = config['layers_path']
 
+    working_images_path = os.path.join("nfts", "temp")
+    os.makedirs(working_images_path, exist_ok=True)
+
     os.makedirs(output_images_path, exist_ok=True)
     os.makedirs(output_metadata_path, exist_ok=True)
 
@@ -186,10 +189,52 @@ def main():
             print(f"No traits selected for NFT #{image_number}. Skipping.")
             continue
 
+        working_image_path = os.path.join(working_images_path, f"{image_number}.png")
+
         # Generate image
         final_image = generate_image(traits, config)
+        final_image.save(working_image_path)
+
+        # Emojify logic (if enabled)
+        emojifier_cfg = config.get("emojifier", {})
+        should_emojify = (
+            emojifier_cfg.get("enable", False)
+            and random.random() < (emojifier_cfg.get("percent", 0) / 100)
+        )
+
+        if should_emojify:
+            print(f"✨ Emojifying NFT #{image_number}...")
+
+            width_range = emojifier_cfg.get("emoji_output_width_range", [32, 64])
+            emoji_width = random.randint(width_range[0], width_range[1])
+
+            emoji_sets = emojifier_cfg.get("emoji_sets", ["OpenMoji"])
+            emoji_set = random.choice(emoji_sets)
+
+            emojifier_path = os.path.abspath(
+                os.path.join(os.path.dirname(__file__), "..", "emojifier", "run.py")
+            )
+            subprocess.run([
+                "python3.11",
+                emojifier_path,
+                "--single",
+                working_image_path,
+                working_image_path,  # Overwrite temp image
+                "--emoji_set",
+                emoji_set,
+                "--width",
+                str(emoji_width)
+            ], check=True)
+
+            traits["Type"] = "Emoji"
+            traits["Emoji Set"] = emoji_set
+            traits["Emoji Width"] = str(emoji_width)
+        else:
+            traits["Type"] = "Original"
+
+        # Move final image to output_images_path
         final_image_path = os.path.join(output_images_path, f"{image_number}.png")
-        final_image.save(final_image_path)
+        os.rename(working_image_path, final_image_path)
 
         # Generate metadata
         metadata = generate_metadata(image_number, traits, config)

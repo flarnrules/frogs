@@ -8,11 +8,23 @@
         },
         {
             "trait_type": "Background",
-            "value": "Green Field"
+            "value": "Green And Purple Lazer"
         },
         {
             "trait_type": "Object",
             "value": "Poo"
+        },
+        {
+            "trait_type": "Type",
+            "value": "Emoji"
+        },
+        {
+            "trait_type": "Emoji set",
+            "value": "Openmoji"
+        },
+        {
+            "trait_type": "Emoji width",
+            "value": "45"
         }
     ]
 }

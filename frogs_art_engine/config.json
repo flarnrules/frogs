@@ -17,6 +17,12 @@
   ],
   "metadata": {
       "description": "Some frogs."
+  },
+
+  "emojifier": {
+  "enable": true,
+  "percent": 5,
+  "emoji_output_width_range": [16, 128],
+  "emoji_sets": ["Noto Emoji", "OpenMoji"]
   }
-  
 }
