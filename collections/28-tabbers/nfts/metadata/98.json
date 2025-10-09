@@ -1,0 +1,26 @@
+{
+    "name": "NFT #98",
+    "description": "Mine $TAB. Be a Tabber.",
+    "attributes": [
+        {
+            "trait_type": "Character",
+            "value": "Tabcoin"
+        },
+        {
+            "trait_type": "Background",
+            "value": "Tabcoin"
+        },
+        {
+            "trait_type": "Clothes",
+            "value": "Buff"
+        },
+        {
+            "trait_type": "Headgear",
+            "value": "Dog"
+        },
+        {
+            "trait_type": "Type",
+            "value": "Original"
+        }
+    ]
+}

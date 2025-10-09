@@ -1,0 +1,220 @@
+(()=>{
+  // ── bootloader guards ───────────────────────────────────────────────────────
+  const SVG=BTLDR&&BTLDR.svg; if(!SVG) throw new Error('BTLDR.svg missing');
+  const R=BTLDR.rnd, E=(t,a)=>{const e=document.createElementNS('http://www.w3.org/2000/svg',t);for(const k in a)e.setAttribute(k,String(a[k]));return e};
+  const rad=d=>d*Math.PI/180, clamp=(x,a,b)=>x<a?a:x>b?b:x, lerp=(a,b,t)=>a+(b-a)*t;
+  const polyStr=pts=>pts.map(p=>`${p.x},${p.y}`).join(' ');
+
+  // ── knobs ───────────────────────────────────────────────────────────────────
+  const S=900;                          // square viewBox
+  const CYCLE_SECONDS=10, LIMIT_FPS=24; // loop + fps cap
+  const STEP=28, CELL_SKIP=2, SEG=84, RES_CURVE=72, CURVE_EVERY=2; // perf
+  const SHOW_GRID=true, SHOW_CURVES=true;
+
+  // diamond viewport (rotated square)
+  const H0=(R()*360)|0;
+  const BG=`hsl(216 30% 8%)`;
+  const DIAM_SIZE=S*0.72;               // diagonal length corner→corner
+  const CX=S*0.5, CY=S*0.52;            // diamond center
+  const HALF=DIAM_SIZE/2;
+  const TOP =   {x:CX,     y:CY-HALF};
+  const RIGHT = {x:CX+HALF,y:CY};
+  const BOTTOM={x:CX,     y:CY+HALF};
+  const LEFT = {x:CX-HALF,y:CY};
+
+  // “corner pop” control: tall cells near corners are redrawn outside the clip
+  const PEAK_LEVEL=0.38;                // >SEA by this fraction of AMP
+  const CORNER_POP_RADIUS=S*0.11;       // distance from any corner (in px)
+
+  // ── stage ───────────────────────────────────────────────────────────────────
+  SVG.setAttribute('viewBox',`0 0 ${S} ${S}`);
+  SVG.setAttribute('preserveAspectRatio','xMidYMid meet');
+  SVG.appendChild(E('rect',{x:0,y:0,width:S,height:S,fill:BG}));
+
+  // diamond clip
+  const DEF=E('defs',{}); SVG.appendChild(DEF);
+  const clip=E('clipPath',{id:'clipDiamond'}); DEF.appendChild(clip);
+  clip.appendChild(E('polygon',{points:polyStr([TOP,RIGHT,BOTTOM,LEFT])}));
+
+  // groups
+  const Gclipped=E('g',{'clip-path':'url(#clipDiamond)'}); SVG.appendChild(Gclipped);
+  const Gterrain=E('g',{}), Gwater=E('g',{}), Ggrid=E('g',{}), Gcurve=E('g',{});
+  Gclipped.appendChild(Gterrain); Gclipped.appendChild(Gwater); Gclipped.appendChild(Ggrid); Gclipped.appendChild(Gcurve);
+
+  // peaks that “escape” the corners (drawn outside the clip)
+  const Gpop=E('g',{}); SVG.appendChild(Gpop);
+
+  // a crisp rim around the diamond (covers tiny aliasing at edges)
+  const rim=`hsl(${H0} 18% 86% / 0.35)`;
+  const Grim=E('g',{}); SVG.appendChild(Grim);
+  Grim.appendChild(E('polygon',{points:polyStr([TOP,RIGHT,BOTTOM,LEFT]),fill:'none',stroke:rim,'stroke-width':1.6,'stroke-linejoin':'round'}));
+
+  // ── field basis centered under the diamond ─────────────────────────────────
+  const ORIGIN={x:CX,y:CY};
+  const AMP=STEP*(1.8+R()*2.4);
+  const f1=0.004+R()*0.004, f2=0.006+R()*0.004;
+  const th1=rad(R()*360), th2=rad(R()*360);
+  const n1={x:Math.cos(th1),y:Math.sin(th1)}, n2={x:Math.cos(th2),y:Math.sin(th2)};
+  const p1={x:-n1.y,y:n1.x}, p2={x:-n2.y,y:n2.x};
+  const SEA=-AMP*0.08;
+
+  // two oblique grid vectors sized by STEP
+  const A1=5+R()*20, SEP=110+R()*30, A2=A1+SEP;
+  const g1={x:Math.cos(rad(A1))*STEP, y:Math.sin(rad(A1))*STEP};
+  const g2={x:Math.cos(rad(A2))*STEP, y:Math.sin(rad(A2))*STEP};
+  const U=(i,j)=>({x:ORIGIN.x + g1.x*i + g2.x*j, y:ORIGIN.y + g1.y*i + g2.y*j});
+  const LINES=Math.ceil((DIAM_SIZE*1.15)/STEP);
+  const LSPAN=LINES*2+6;
+
+  // palette + lighting
+  const CP=[
+    {h:SEA-0.70*AMP, c:{h:210,s:70,l:24}},
+    {h:SEA-0.15*AMP, c:{h:204,s:65,l:42}},
+    {h:SEA+0.00*AMP, c:{h: 50,s:80,l:62}},
+    {h:SEA+0.20*AMP, c:{h: 95,s:60,l:58}},
+    {h:SEA+0.55*AMP, c:{h:115,s:50,l:36}},
+    {h:SEA+0.90*AMP, c:{h:  0,s: 0,l:94}},
+  ];
+  const colLerp=(a,b,t)=>({h:lerp(a.h,b.h,t), s:lerp(a.s,b.s,t), l:lerp(a.l,b.l,t)});
+  const colorAtH=(h)=>{ if(h<=CP[0].h) return CP[0].c;
+    for(let k=0;k<CP.length-1;k++){const a=CP[k],b=CP[k+1]; if(h<=b.h){const t=(h-a.h)/(b.h-a.h||1e-6); return colLerp(a.c,b.c,t);} }
+    return CP[CP.length-1].c;
+  };
+  const LDIR=(()=>{const v={x:-0.7,y:-0.6}; const m=Math.hypot(v.x,v.y)||1; return {x:v.x/m,y:v.y/m};})();
+  const SHADE_K=0.35;
+
+  // helpers
+  const dist=(a,b)=>Math.hypot(a.x-b.x,a.y-b.y);
+  const nearCorner=(p)=> dist(p,TOP)<CORNER_POP_RADIUS || dist(p,RIGHT)<CORNER_POP_RADIUS
+                      || dist(p,BOTTOM)<CORNER_POP_RADIUS || dist(p,LEFT)<CORNER_POP_RADIUS;
+
+  // ── frame builder ──────────────────────────────────────────────────────────
+  function buildFrame(phase){
+    Gterrain.textContent=''; Gwater.textContent=''; Ggrid.textContent=''; Gcurve.textContent=''; Gpop.textContent='';
+
+    // phase-aware field
+    const z=(x,y)=> AMP*(0.6*Math.sin((x*n1.x+y*n1.y)*f1 + phase)+0.4*Math.sin((x*n2.x+y*n2.y)*f2 + phase));
+    const grad=(x,y)=>{
+      const a1=(x*n1.x+y*n1.y)*f1 + phase, a2=(x*n2.x+y*n2.y)*f2 + phase;
+      const dz1=AMP*0.6*f1*Math.cos(a1), dz2=AMP*0.4*f2*Math.cos(a2);
+      return {gx:dz1*n1.x+dz2*n2.x, gy:dz1*n1.y+dz2*n2.y};
+    };
+    const W=(p)=>{
+      const a1=(p.x*n1.x+p.y*n1.y)*f1 + phase, a2=(p.x*n2.x+p.y*n2.y)*f2 + phase;
+      const dz1=AMP*0.6*f1*Math.cos(a1), dz2=AMP*0.4*f2*Math.cos(a2);
+      const h=AMP*(0.6*Math.sin(a1)+0.4*Math.sin(a2));
+      return {x:p.x+0.9*(dz1*p1.x+dz2*p2.x), y:p.y-1.0*h};
+    };
+    const shade=(base,x,y,a=1)=>{
+      const g=grad(x,y);
+      const lam=clamp(0.5 - SHADE_K*(g.gx*LDIR.x + g.gy*LDIR.y), 0, 1);
+      const l=clamp(base.l*(0.75 + 0.5*lambertify(lam)), 5, 95);
+      return `hsl(${base.h} ${base.s}% ${l}% / ${a})`;
+    };
+    const lambertify = v => v; // hook if you want to curve the lambert
+
+    // TERRAIN + CORNER POP
+    const peakThresh = SEA + PEAK_LEVEL*AMP;
+    for(let j=-LINES+1;j<LINES-1;j+=CELL_SKIP){
+      for(let i=-LINES+1;i<LINES-1;i+=CELL_SKIP){
+        const U00=U(i,j), U10=U(i+CELL_SKIP,j), U11=U(i+CELL_SKIP,j+CELL_SKIP), U01=U(i,j+CELL_SKIP);
+        const h00=z(U00.x,U00.y), h10=z(U10.x,U10.y), h11=z(U11.x,U11.y), h01=z(U01.x,U01.y);
+        const hAvg=(h00+h10+h11+h01)/4;
+
+        // warped screen-space polygon
+        const P00=W(U00), P10=W(U10), P11=W(U11), P01=W(U01);
+        const cx=(P00.x+P10.x+P11.x+P01.x)/4, cy=(P00.y+P10.y+P11.y+P01.y)/4;
+        const fill=(()=>{
+          // recompute shade center in field space for normals (optionally use avg of U’s)
+          const ux=(U00.x+U10.x+U11.x+U01.x)/4, uy=(U00.y+U10.y+U11.y+U01.y)/4;
+          return shade(colorAtH(hAvg), ux, uy, 1);
+        })();
+
+        // draw inside diamond
+        Gterrain.appendChild(E('polygon',{points:polyStr([P00,P10,P11,P01]), fill}));
+
+        // “pop” tall cells near corners outside the clip
+        if(hAvg>peakThresh){
+          const pc={x:cx,y:cy};
+          if(nearCorner(pc)){
+            Gpop.appendChild(E('polygon',{points:polyStr([P00,P10,P11,P01]), fill}));
+          }
+        }
+      }
+    }
+
+    // WATER FILM (flat-ish)
+    const waterFilm=(h)=>{ const t=clamp((SEA-h)/(.7*AMP),0,1); return {h:204,s:40,l:60,a:0.12+0.68*t}; };
+    for(let j=-LINES+1;j<LINES-1;j+=CELL_SKIP){
+      for(let i=-LINES+1;i<LINES-1;i+=CELL_SKIP){
+        const U00=U(i,j), U10=U(i+CELL_SKIP,j), U11=U(i+CELL_SKIP,j+CELL_SKIP), U01=U(i,j+CELL_SKIP);
+        const h00=z(U00.x,U00.y), h10=z(U10.x,U10.y), h11=z(U11.x,U11.y), h01=z(U01.x,U01.y);
+        const maxH=Math.max(h00,h10,h11,h01), hAvg=(h00+h10+h11+h01)/4;
+        if(maxH<SEA-AMP*0.02 || hAvg<SEA){
+          const c=waterFilm(hAvg);
+          Gwater.appendChild(E('polygon',{points:polyStr([U00,U10,U11,U01]), fill:`hsl(${c.h} ${c.s}% ${c.l}% / ${c.a})`}));
+        }
+      }
+    }
+
+    if (SHOW_GRID){
+      // FLAT GRID (fades on land)
+      const alphaFlat=(h)=>{ const aW=0.75, s0=SEA-0.04*AMP, s1=SEA+0.22*AMP;
+        if(h<=s0) return aW; if(h>=s1) return 0; const t=(h-s0)/(s1-s0); return aW*(1-t); };
+      const drawSeg=(a,b,stroke)=>{
+        let p0=a;
+        for(let s=1;s<=SEG;s++){
+          const u=s/SEG, p1={x:a.x+(b.x-a.x)*u, y:a.y+(b.y-a.y)*u};
+          const mid={x:(p0.x+p1.x)/2, y:(p0.y+p1.y)/2};
+          const h=z(mid.x,mid.y), al=alphaFlat(h);
+          if(al>0.02) Ggrid.appendChild(E('line',{x1:p0.x,y1:p0.y,x2:p1.x,y2:p1.y,stroke, 'stroke-opacity':al, 'stroke-width':1}));
+          p0=p1;
+        }
+      };
+      const s1=`hsl(${H0} 22% 32% / 0.55)`, s2=`hsl(${(H0+12)%360} 22% 32% / 0.55)`;
+      for(let k=-LINES-2;k<=LINES+2;k++){
+        const a={x:ORIGIN.x+g2.x*k-g1.x*LSPAN, y:ORIGIN.y+g2.y*k-g1.y*LSPAN};
+        const b={x:ORIGIN.x+g2.x*k+g1.x*LSPAN, y:ORIGIN.y+g2.y*k+g1.y*LSPAN};
+        drawSeg(a,b,s1);
+      }
+      for(let k=-LINES-2;k<=LINES+2;k++){
+        const a={x:ORIGIN.x+g1.x*k-g2.x*LSPAN, y:ORIGIN.y+g1.y*k-g2.y*LSPAN};
+        const b={x:ORIGIN.x+g1.x*k+g2.x*LSPAN, y:ORIGIN.y+g1.y*k+g2.y*LSPAN};
+        drawSeg(a,b,s2);
+      }
+    }
+
+    if (SHOW_CURVES){
+      // CURVED GRID on land
+      const addLand=(a,b,stroke,w)=>{
+        let d="", pen=false;
+        for(let t=0;t<=RES_CURVE;t++){
+          const u=t/RES_CURVE, x=a.x+(b.x-a.x)*u, y=a.y+(b.y-a.y)*u;
+          if(z(x,y)>SEA){ const p=W({x,y}); d+=pen?`L ${p.x} ${p.y} `:`M ${p.x} ${p.y} `; pen=true; } else pen=false;
+        }
+        if(d) Gcurve.appendChild(E('path',{d,fill:'none',stroke,'stroke-width':w,'stroke-opacity':'0.85'}));
+      };
+      for(let k=-LINES-2;k<=LINES+2;k+=CURVE_EVERY){
+        const a={x:ORIGIN.x+g2.x*k-g1.x*LSPAN, y:ORIGIN.y+g2.y*k-g1.y*LSPAN};
+        const b={x:ORIGIN.x+g2.x*k+g1.x*LSPAN, y:ORIGIN.y+g2.y*k+g1.y*LSPAN};
+        addLand(a,b,`hsl(${H0} 32% 42%)`,1.05);
+      }
+      for(let k=-LINES-2;k<=LINES+2;k+=CURVE_EVERY){
+        const a={x:ORIGIN.x+g1.x*k-g2.x*LSPAN, y:ORIGIN.y+g1.y*k-g2.y*LSPAN};
+        const b={x:ORIGIN.x+g1.x*k+g2.x*LSPAN, y:ORIGIN.y+g1.y*k+g2.y*LSPAN};
+        addLand(a,b,`hsl(${(H0+12)%360} 32% 42%)`,1.05);
+      }
+    }
+  }
+
+  // ── RAF loop ────────────────────────────────────────────────────────────────
+  const TWO_PI=Math.PI*2; let tPrev=null, acc=0, frameInterval=LIMIT_FPS?(1000/LIMIT_FPS):0;
+  function tick(ts){
+    if(tPrev==null) tPrev=ts;
+    const dt=ts-tPrev; tPrev=ts; acc+=dt;
+    const phase=((ts/1000)/CYCLE_SECONDS)*TWO_PI % TWO_PI;
+    if(!frameInterval || acc>=frameInterval){ buildFrame(phase); acc = frameInterval ? (acc-frameInterval) : 0; }
+    requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+})();

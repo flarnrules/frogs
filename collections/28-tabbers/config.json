@@ -1,0 +1,29 @@
+{
+  "nft_start_number": 1,
+  "nft_end_number": 100,
+  "output_images_path": "nfts/images/",
+  "output_metadata_path": "nfts/metadata/",
+  "layers_path": "media/layers/",
+  "quotes_path": "code/data/quotes.json",
+  "background_color": [0, 0, 0],
+  "image_size": [1024, 1024],
+  "none_probabilities": {
+      "object": 0.2
+  },
+  "layers_order": [
+    "core_layers/background",
+    "core_layers/character",
+    "core_layers/clothes",
+    "core_layers/headgear"
+  ],
+  "metadata": {
+      "description": "Mine $TAB. Be a Tabber."
+  },
+
+  "emojifier": {
+  "enable": true,
+  "percent": 0,
+  "emoji_output_width_range": [16, 128],
+  "emoji_sets": ["Noto Emoji", "OpenMoji"]
+  }
+}

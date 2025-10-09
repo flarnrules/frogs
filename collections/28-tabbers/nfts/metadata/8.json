@@ -1,0 +1,26 @@
+{
+    "name": "NFT #8",
+    "description": "Mine $TAB. Be a Tabber.",
+    "attributes": [
+        {
+            "trait_type": "Character",
+            "value": "Tabcoin"
+        },
+        {
+            "trait_type": "Background",
+            "value": "Windows Wp"
+        },
+        {
+            "trait_type": "Clothes",
+            "value": "Dapper"
+        },
+        {
+            "trait_type": "Headgear",
+            "value": "Propellor"
+        },
+        {
+            "trait_type": "Type",
+            "value": "Original"
+        }
+    ]
+}

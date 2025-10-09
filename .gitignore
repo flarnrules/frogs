@@ -2,7 +2,10 @@ nfts/images/
 nfts/metadata/
 tests/
 frog_day/
-collections
+collections/1-frogs
+collections/2-frog_day
+collections/3-frog_ponds
+collections/4-shitmos
 collections/5-sandwich
 collections/6-sentinal
 collections/7-unicorn
@@ -13,8 +16,8 @@ collections/11-color_flow
 collections/12-alchemists
 collections/13-shitberus
 collections/14-owls
+collections/15-star_seizures
 collections/16-wads
-collections/17-entities
 collections/18-squirrels
 collections/19-cute_narwals
 collections/20-gartic

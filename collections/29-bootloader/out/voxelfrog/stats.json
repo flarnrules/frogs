@@ -1,0 +1,10 @@
+{
+  "project": "voxelfrog",
+  "width": 32,
+  "height": 32,
+  "rows": 32,
+  "palette_size": 15,
+  "payload_bytes": 1159,
+  "snippet_bytes": 15643,
+  "snippet_min_bytes": 15620
+}

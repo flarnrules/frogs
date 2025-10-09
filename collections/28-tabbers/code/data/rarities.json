@@ -1,0 +1,26 @@
+{
+    "core_layers/background": {
+        "tabcoin.png": 50.0,
+        "windows_wp.png": 50.0
+    },
+    "core_layers/character": {
+        "tabcoin.png": 100.0
+    },
+    "core_layers/headgear": {
+        "groomed.png": 14.29,
+        "high paying job.png": 14.29,
+        "dog.png": 14.29,
+        "helmut.png": 14.29,
+        "cloak.png": 14.29,
+        "fighter.png": 14.29,
+        "propellor.png": 14.260000000000026
+    },
+    "core_layers/clothes": {
+        "buff.png": 16.67,
+        "rocket.png": 16.67,
+        "dapper.png": 16.67,
+        "high paying job.png": 16.67,
+        "dog.png": 16.67,
+        "cloak.png": 16.64999999999999
+    }
+}
