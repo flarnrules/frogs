@@ -22,7 +22,7 @@ from PIL import Image
 # =======================
 CONFIG = {
     # Where to read tiles (png/jpg/webp)
-    "INPUT_DIR": "out/voxelfrog/exports",
+    "INPUT_DIR": "../voxelfrog/exports",
 
     # Output file path
     "OUTPUT_PATH": "out/voxelfrog/tower_mosaic3.png",

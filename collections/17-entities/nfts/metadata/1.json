@@ -1,4 +1,5 @@
 {
+    "number": 1,
     "name":"nectar collectar",
     "description": "this lil fella might be the same nectar collectin fuzzy guy gracing the cover art of entities, but he's too far away to know for sure... one thing is certain, he seems pleasant 🐝",
     "attributes": [
@@ -23,8 +24,28 @@
             "value": "259x164"
         },
         {
+            "trait_type": "compressed dimensions",
+            "value": "64x41"
+        },   
+        {
             "trait_type": "number of frames",
             "value": "33"
-        }   
+        },
+        {
+            "trait_type": "number of colors",
+            "value": 6
+        },
+        {
+            "trait_type": "level of intensity",
+            "value": "low"
+        },
+        {
+            "trait_type": "editions",
+            "value": 7
+        },
+        {
+            "trait_type": "compression %",
+            "value": 75
+        }
     ]
 }
