@@ -1,0 +1,35 @@
+{
+  "input": "../input/cosmos3.gif",
+  "output": "../output/cosmos3-1.gif",
+  "default_preset": "signal_weave",
+  "presets": {
+    "clean_double": {
+    "interpolate": 2,
+    "interpolation_mode": "palette_dither",
+    "effect": "none",
+    "strength": 0.0,
+    "seed": 1131
+    },
+    "orbital_shear": {
+    "interpolate": 2,
+    "interpolation_mode": "palette_dither",
+    "effect": "orbital_shear",
+    "strength": 0.0,
+    "seed": 1131
+    },
+    "chromatic_echo": {
+    "interpolate": 2,
+    "interpolation_mode": "palette_dither",
+    "effect": "chromatic_echo",
+    "strength": 1.34,
+    "seed": 1131
+    },
+    "signal_weave": {
+    "interpolate": 2,
+    "interpolation_mode": "palette_dither",
+    "effect": "signal_weave",
+    "strength": 0.0,
+    "seed": 1131
+    }
+  }
+}
